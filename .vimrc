@@ -1,4 +1,4 @@
-" vim: fdm=marker fdl=0 fdls=0
+"vim:=marker fdl=0 fdls=0
 " Check the operating system ------------------------------
 if !exists( 'g:os' )
   if has( 'win32' ) || has( 'win64' )
@@ -256,7 +256,8 @@ if !empty( glob( expand( $VIMHOME . 'autoload/plug.vim' ) ) )
     "Plug 'vim-syntastic/syntastic'
     Plug 'altercation/vim-colors-solarized'
     Plug 'tell-k/vim-autopep8'
-    Plug 'Valloric/YouCompleteMe', { 'do' : './install.py --clang-completer --system-libclang' }
+    "Plug 'ycm-core/YouCompleteMe'
+    Plug 'ycm-core/YouCompleteMe', { 'do' : '/usr/bin/python ./install.py --go-completer --java-completer --rust-completer --clang-completer --system-libclang' }
     Plug 'scrooloose/nerdtree'
     Plug 'scrooloose/nerdcommenter'
     Plug 'Yggdroot/indentLine'
@@ -274,6 +275,7 @@ if !empty( glob( expand( $VIMHOME . 'autoload/plug.vim' ) ) )
     Plug 'majutsushi/tagbar'
     Plug 'derekwyatt/vim-scala'
     Plug 'artur-shaik/vim-javacomplete2'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   call plug#end()
 endif
 
@@ -313,6 +315,13 @@ if isdirectory( $USRPLGD . 'vim-workspace' )
   augroup END
 endif
 
+" vim-go----------------------------------------
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
 " Airline configuration ------------------------------
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -327,7 +336,7 @@ let g:airline_symbols.linenr = ''
 let g:airline_symbols.maxlinenr = '??'
 let g:airline_symbols.branch = '??'
 let g:airline_symbols.paste = ''
-let g:airline_symbols.readonly = '??'
+"let g:airline_symbols.readonly = '??'
 let g:airline_symbols.spell = 'SPELL'
 let g:airline_symbols.notexists = ''
 let g:airline_symbols.whitespace = '??'
@@ -350,7 +359,7 @@ endif
 "let g:ycm_confirm_extra_conf=0
 set completeopt=longest,menu
 "python interpreter path"
-let g:ycm_path_to_python_interpreter='python'
+let g:ycm_path_to_python_interpreter='/usr/bin/python'
 "syntax complete"
 let g:ycm_seed_identifiers_with_syntax=1
 "complete in comments

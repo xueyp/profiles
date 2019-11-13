@@ -4,7 +4,7 @@
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	0.0.0	/45968eff/
+!_TAG_PROGRAM_VERSION	0.0.0	/3fdf28bc/
 $USRLWKDIR	.vimrc	/^  let $USRLWKDIR  =expand( $USRSECD.'\/lastworkdir' )$/;"	v
 $USRLWKDIR	.vimrc	/^  let $USRLWKDIR  =expand( $USRSECD.'\/lastworkdirg' )$/;"	v
 $USRLWKDIR	forwindows/_vimrc	/^  let $USRLWKDIR  =expand( $USRSECD.'\/lastworkdir' )$/;"	v
@@ -132,7 +132,6 @@ g:airline_symbols	.vimrc	/^let g:airline_symbols.linenr = ''$/;"	v
 g:airline_symbols	.vimrc	/^let g:airline_symbols.maxlinenr = '??'$/;"	v
 g:airline_symbols	.vimrc	/^let g:airline_symbols.notexists = ''$/;"	v
 g:airline_symbols	.vimrc	/^let g:airline_symbols.paste = ''$/;"	v
-g:airline_symbols	.vimrc	/^let g:airline_symbols.readonly = '??'$/;"	v
 g:airline_symbols	.vimrc	/^let g:airline_symbols.spell = 'SPELL'$/;"	v
 g:airline_symbols	.vimrc	/^let g:airline_symbols.whitespace = '??'$/;"	v
 g:airline_symbols	forwindows/_vimrc	/^  let g:airline_symbols = {}$/;"	v
@@ -149,6 +148,11 @@ g:autoformat_verbosemode	.vimrc	/^let g:autoformat_verbosemode=1$/;"	v
 g:autoformat_verbosemode	forwindows/_vimrc	/^let g:autoformat_verbosemode=1$/;"	v
 g:autopep8_disable_show_diff	.vimrc	/^let g:autopep8_disable_show_diff=1$/;"	v
 g:autopep8_disable_show_diff	forwindows/_vimrc	/^let g:autopep8_disable_show_diff=1$/;"	v
+g:go_highlight_build_constraints	.vimrc	/^let g:go_highlight_build_constraints = 1$/;"	v
+g:go_highlight_functions	.vimrc	/^let g:go_highlight_functions = 1$/;"	v
+g:go_highlight_methods	.vimrc	/^let g:go_highlight_methods = 1$/;"	v
+g:go_highlight_operators	.vimrc	/^let g:go_highlight_operators = 1$/;"	v
+g:go_highlight_structs	.vimrc	/^let g:go_highlight_structs = 1$/;"	v
 g:indentLine_char	.vimrc	/^let g:indentLine_char='┆'$/;"	v
 g:indentLine_char	forwindows/_vimrc	/^let g:indentLine_char='┆'$/;"	v
 g:indentLine_enabled	.vimrc	/^let g:indentLine_enabled = 1$/;"	v
@@ -200,7 +204,7 @@ g:ycm_complete_in_strings	.vimrc	/^let g:ycm_complete_in_strings = 1$/;"	v
 g:ycm_complete_in_strings	forwindows/_vimrc	/^let g:ycm_complete_in_strings = 1$/;"	v
 g:ycm_min_num_of_chars_for_completion	.vimrc	/^let g:ycm_min_num_of_chars_for_completion=2$/;"	v
 g:ycm_min_num_of_chars_for_completion	forwindows/_vimrc	/^let g:ycm_min_num_of_chars_for_completion=2$/;"	v
-g:ycm_path_to_python_interpreter	.vimrc	/^let g:ycm_path_to_python_interpreter='python'$/;"	v
+g:ycm_path_to_python_interpreter	.vimrc	/^let g:ycm_path_to_python_interpreter='\/usr\/bin\/python'$/;"	v
 g:ycm_path_to_python_interpreter	forwindows/_vimrc	/^let g:ycm_path_to_python_interpreter='python'$/;"	v
 g:ycm_seed_identifiers_with_syntax	.vimrc	/^let g:ycm_seed_identifiers_with_syntax=1$/;"	v
 g:ycm_seed_identifiers_with_syntax	forwindows/_vimrc	/^let g:ycm_seed_identifiers_with_syntax=1$/;"	v
