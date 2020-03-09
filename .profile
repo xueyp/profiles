@@ -17,14 +17,15 @@ export HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
 export HBASE_HOME=/usr/local/hbase
 export HIVE_HOME=/usr/local/hive
 export SPARK_HOME=/usr/local/spark
-export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SCALA_HOME/bin:$SPARK_HOME/bin:/usr/local/sbt/bin:/usr/local/cassandra/bin:/usr/local/kafka/bin:/usr/local/mongodb/bin:/usr/local/es/bin:$HBASE_HOME/bin:$HIVE_HOME/bin:/home/x/firefoxDriver:JAVA_HOME/bin
+export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SCALA_HOME/bin:$SPARK_HOME/bin:/usr/local/sbt/bin:/usr/local/cassandra/bin:/usr/local/kafka/bin:/usr/local/mongodb/bin:/usr/local/es/bin:$HBASE_HOME/bin:$HIVE_HOME/bin:/home/x/firefoxDriver:JAVA_HOME/bin:/usr/local/bin
 
-alias vi="vim"
-alias xxnet="sudo /usr/local/XX-Net/start &"
-
+alias vi="vim" alias xxnet="sudo /usr/local/XX-Net/start &"
+alias ampps="sudo /usr/local/ampps/Ampps"
 alias kali="ssh -X 192.168.56.2 -l root"
 alias mycliL="mycli -u root -p 111111qQ -h 127.0.0.1 --local-infile 1"
-alias pgcliL="pgcli -u root -p 111111qQ -h 127.0.0.1 --local-infile 1"
+alias pgcliL="pgcli -u postgres "
+
+alias mongodbs="mongod --dbpath /home/x/mongodbdata/db --logpath /home/x/mongodbdata/logs"
 alias elasticsearch="/usr/local/es/bin/elasticsearch"
 alias logstash="/usr/local/logstash/bin/logstash -f /usr/local/logstash/config/logstash.conf"
 alias kibana="/usr/local/kibana/bin/kibana"
@@ -50,6 +51,6 @@ alias xmr="cd ~/xmr-stak/build/bin/ && sudo ./xmr-stak"
 alias startopenvas="sudo systemctl restart redis && sudo systemctl restart openvas-scanner && sudo openvasmd -p 9390 -a 127.0.0.1 && sudo gsad -f --listen=127.0.0.1 --mlisten=127.0.0.1 --mport=9390"
 
 alias condas="source /usr/local/anaconda3/bin/activate root"
-alias condae="conda /usr/local/anaconda3/bin/deactivate root"
+alias condae="conda deactivate "
 
 export PATH="$HOME/.cargo/bin:$PATH"

@@ -276,6 +276,12 @@ if !empty( glob( expand( $VIMHOME . 'autoload/plug.vim' ) ) )
     Plug 'derekwyatt/vim-scala'
     Plug 'artur-shaik/vim-javacomplete2'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'lilydjwg/fcitx.vim'
+    Plug 'pangloss/vim-javascript'
+    Plug 'mattn/emmet-vim'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'elzr/vim-json'
+    Plug 'MaxMEllon/vim-jsx-pretty'
   call plug#end()
 endif
 
