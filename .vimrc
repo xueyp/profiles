@@ -256,8 +256,8 @@ if !empty( glob( expand( $VIMHOME . 'autoload/plug.vim' ) ) )
     "Plug 'vim-syntastic/syntastic'
     Plug 'altercation/vim-colors-solarized'
     Plug 'tell-k/vim-autopep8'
-    "Plug 'ycm-core/YouCompleteMe'
-    Plug 'ycm-core/YouCompleteMe', { 'do' : '/usr/bin/python ./install.py --go-completer --java-completer --rust-completer --clang-completer --system-libclang' }
+    Plug 'ycm-core/YouCompleteMe', { 'do': '/usr/bin/python ./install.py'}
+    "Plug 'ycm-core/YouCompleteMe', { 'do' : '/usr/bin/python ./install.py --go-completer --java-completer --rust-completer --clang-completer --system-libclang' }
     Plug 'scrooloose/nerdtree'
     Plug 'scrooloose/nerdcommenter'
     Plug 'Yggdroot/indentLine'

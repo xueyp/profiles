@@ -9,15 +9,6 @@ export XIM_PROGRAM="fcitx"
 export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE="fcitx"
 export QT_IM_MODULE="fcitx"
-export EDITOR=vim
-export JAVA_HOME=/usr/local/jdk
-export SCALA_HOME=/usr/local/scala
-export HADOOP_HOME=/usr/local/hadoop
-export HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
-export HBASE_HOME=/usr/local/hbase
-export HIVE_HOME=/usr/local/hive
-export SPARK_HOME=/usr/local/spark
-export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SCALA_HOME/bin:$SPARK_HOME/bin:/usr/local/sbt/bin:/usr/local/cassandra/bin:/usr/local/kafka/bin:/usr/local/mongodb/bin:/usr/local/es/bin:$HBASE_HOME/bin:$HIVE_HOME/bin:/home/x/firefoxDriver:JAVA_HOME/bin:/usr/local/bin
 
 alias vi="vim" alias xxnet="sudo /usr/local/XX-Net/start &"
 alias ampps="sudo /usr/local/ampps/Ampps"
@@ -47,10 +38,20 @@ export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 alias pysparksh="pyspark --master spark://localhost:7077 --num-executors 3 --driver-memory 1g --executor-memory 1g --executor-cores 1"
 
-alias xmr="cd ~/xmr-stak/build/bin/ && sudo ./xmr-stak"
 alias startopenvas="sudo systemctl restart redis && sudo systemctl restart openvas-scanner && sudo openvasmd -p 9390 -a 127.0.0.1 && sudo gsad -f --listen=127.0.0.1 --mlisten=127.0.0.1 --mport=9390"
 
 alias condas="source /usr/local/anaconda3/bin/activate root"
 alias condae="conda deactivate "
 
-export PATH="$HOME/.cargo/bin:$PATH"
+export GO111MODULE=auto
+export GOPROXY=https://goproxy.cn
+
+alias xmrig="cd /sbin/x/xmrig/build && ./start.sh"
+
+export FABRIC_PATH=/usr/local/fabric-samples
+export FABRIC_CFG_PATH=$FABRIC_PATH/config/
+
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$FABRIC_PATH/bin:/usr/local/go/bin:$PATH"
+
+
+
