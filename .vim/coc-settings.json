@@ -1,0 +1,16 @@
+{
+"languageserver": {
+  "golang": {
+    "command": "gopls",
+    "rootPatterns": ["go.mod"],
+    "disableWorkspaceFolders": true,
+    "filetypes": ["go"]
+  },
+
+  "sql": {
+    "command": "sql-language-server",
+    "args" : ["up", "--method", "stdio"],
+    "filetypes": ["sql", "mysql"]
+    }
+}
+}

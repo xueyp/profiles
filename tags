@@ -1,0 +1,311 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+$USRLWKDIR	.vimrc	/^  let $USRLWKDIR  =expand( $USRSECD.'\/lastworkdir' )$/;"	v
+$USRLWKDIR	.vimrc	/^  let $USRLWKDIR  =expand( $USRSECD.'\/lastworkdirg' )$/;"	v
+$USRLWKDIR	forwindows/_vimrc	/^  let $USRLWKDIR  =expand( $USRSECD.'\/lastworkdir' )$/;"	v
+$USRLWKDIR	forwindows/_vimrc	/^  let $USRLWKDIR  =expand( $USRSECD.'\/lastworkdirg' )$/;"	v
+$USRPLGD	.vimrc	/^let $USRPLGD=expand( $USRVIMD . 'plugged\/' )$/;"	v
+$USRPLGD	forwindows/_vimrc	/^let $USRPLGD=expand( $USRVIMD . 'plugged\/' )$/;"	v
+$USRSECD	.vimrc	/^let $USRSECD=expand( $USRVIMD.'sessions' )$/;"	v
+$USRSECD	forwindows/_vimrc	/^let $USRSECD=expand( $USRVIMD.'sessions' )$/;"	v
+$USRTEMPD	.vimrc	/^let $USRTEMPD=expand( $USRVIMD . 'vimtemp\/' )$/;"	v
+$USRTEMPD	forwindows/_vimrc	/^let $USRTEMPD=expand( $USRVIMD . 'vimtemp\/' )$/;"	v
+$USRVIMD	.vimrc	/^let $USRVIMD=expand( $VIMHOME . 'myvim\/' )$/;"	v
+$USRVIMD	forwindows/_vimrc	/^let $USRVIMD=expand( $VIMHOME . 'myvim\/' )$/;"	v
+$VIMHOME	.vimrc	/^let $VIMHOME=expand( $HOME . '\/.vim\/' )$/;"	v
+$VIMHOME	forwindows/_vimrc	/^let $VIMHOME='d:\/dev\/Vim\/'$/;"	v
+0	.vim/coc-settings.json	/^    "args" : ["up", "--method", "stdio"],$/;"	s	array:languageserver.sql.args
+0	.vim/coc-settings.json	/^    "filetypes": ["go"]$/;"	s	array:languageserver.golang.filetypes
+0	.vim/coc-settings.json	/^    "filetypes": ["sql", "mysql"]$/;"	s	array:languageserver.sql.filetypes
+0	.vim/coc-settings.json	/^    "rootPatterns": ["go.mod"],$/;"	s	array:languageserver.golang.rootPatterns
+1	.vim/coc-settings.json	/^    "args" : ["up", "--method", "stdio"],$/;"	s	array:languageserver.sql.args
+1	.vim/coc-settings.json	/^    "filetypes": ["sql", "mysql"]$/;"	s	array:languageserver.sql.filetypes
+2	.vim/coc-settings.json	/^    "args" : ["up", "--method", "stdio"],$/;"	s	array:languageserver.sql.args
+4K	.config/mpv/mpv.conf	/^[4K]$/;"	s
+4K-inverted	.config/mpv/mpv.conf	/^[4K-inverted]$/;"	s
+60FPS	.config/mpv/mpv.conf	/^[60FPS]$/;"	s
+;a	.vimrc	/^noremap ;a =ip$/;"	m
+;a	forwindows/_vimrc	/^noremap ;a =ip$/;"	m
+;p	.vimrc	/^nmap ;p "*p$/;"	m
+;p	forwindows/_vimrc	/^nmap ;p "*p$/;"	m
+;x	.vimrc	/^vnoremap ;x "*y$/;"	m
+;x	forwindows/_vimrc	/^vnoremap ;x "*y$/;"	m
+<A-j>	.vimrc	/^imap <A-j> <C-x><C-o>$/;"	m
+<A-j>	forwindows/_vimrc	/^imap <A-j> <C-x><C-o>$/;"	m
+<C-e>	.vimrc	/^nmap <C-e> :Buffers<CR>$/;"	m
+<C-p>	.vimrc	/^nmap <C-p> :Files<CR>$/;"	m
+<CR>	.vimrc	/^inoremap <expr> <CR>       pumvisible() ? '<C-y>' : '<CR>'     $/;"	m
+<CR>	forwindows/_vimrc	/^inoremap <expr> <CR>       pumvisible() ? '<C-y>' : '<CR>'     $/;"	m
+<F2>	.vimrc	/^map <F2> :NERDTreeToggle<cr>$/;"	m
+<F2>	forwindows/_vimrc	/^map <F2> :NERDTreeToggle<cr>$/;"	m
+<F3>	.vimrc	/^map <F3> :TagbarToggle<CR>$/;"	m
+<F3>	forwindows/_vimrc	/^map <F3> :TagbarToggle<CR>$/;"	m
+<F4>	.vimrc	/^map <F4> <leader>ci <CR>$/;"	m
+<F4>	forwindows/_vimrc	/^map <F4> <leader>ci <CR>$/;"	m
+<F5>	.vimrc	/^map <F5> :QuickRun<CR>$/;"	m
+<F5>	forwindows/_vimrc	/^map <F5> :call RunPythonOrC()<CR>$/;"	m
+<F6>	.vimrc	/^noremap <F6> :Autoformat<CR>:w<CR>$/;"	m
+<F6>	forwindows/_vimrc	/^noremap <F6> :Autoformat<CR>:w<CR>$/;"	m
+<leader>P	.vimrc	/^nnoremap <leader>P :InstantMarkdownPreview<CR>$/;"	m
+<leader>W	.vimrc	/^nnoremap <leader>W :CtrlSF$/;"	m
+ColorEcho	.vimrc	/^  fu! ColorEcho( msg )$/;"	f
+ColorEcho	forwindows/_vimrc	/^  fu! ColorEcho( msg )$/;"	f
+Gf	.vimrc	/^nnoremap Gf <C-w>gf$/;"	m
+Gf	forwindows/_vimrc	/^nnoremap Gf <C-w>gf$/;"	m
+Gotoworkdir	.vimrc	/^  fu Gotoworkdir()$/;"	f
+Gotoworkdir	forwindows/_vimrc	/^  fu Gotoworkdir()$/;"	f
+MyDiff	forwindows/_vimrc	/^function MyDiff()$/;"	f
+NERDTreeChDirMode	.vimrc	/^let NERDTreeChDirMode =1$/;"	v
+NERDTreeChDirMode	forwindows/_vimrc	/^let NERDTreeChDirMode =1$/;"	v
+NERDTreeIgnore	.vimrc	/^let NERDTreeIgnore =['\\~$', '\\.pyc$', '\\.swp$']$/;"	v
+NERDTreeIgnore	forwindows/_vimrc	/^let NERDTreeIgnore =['\\~$', '\\.pyc$', '\\.swp$']$/;"	v
+NERDTreeShowBookmarks	.vimrc	/^let NERDTreeShowBookmarks =1$/;"	v
+NERDTreeShowBookmarks	forwindows/_vimrc	/^let NERDTreeShowBookmarks =1$/;"	v
+NERDTreeWinSize	.vimrc	/^let NERDTreeWinSize =25$/;"	v
+NERDTreeWinSize	forwindows/_vimrc	/^let NERDTreeWinSize =25$/;"	v
+NotebookApp	.jupyter/jupyter_notebook_config.json	/^  "NotebookApp": {$/;"	o
+Q	.vimrc	/^nnoremap Q @q$/;"	m
+Q	.vimrc	/^vnoremap Q :norm @q<cr>$/;"	m
+Q	forwindows/_vimrc	/^nnoremap Q @q$/;"	m
+Q	forwindows/_vimrc	/^vnoremap Q :norm @q<cr>$/;"	m
+RunPythonOrC	forwindows/_vimrc	/^fu RunPythonOrC()$/;"	f
+Saveworkdir	.vimrc	/^  fu Saveworkdir()$/;"	f
+Saveworkdir	forwindows/_vimrc	/^  fu Saveworkdir()$/;"	f
+agent	.config/mpv/mpv.conf	/^user-agent='Mozilla\/5.0 (Macintosh; Intel Mac OS X 10.11; rv:47.0) Gecko\/20100101 Firefox\/47./;"	k	section:protocol.http
+agent	.config/mpv/mpv.conf	/^user-agent='Mozilla\/5.0 (Macintosh; Intel Mac OS X 10.11; rv:47.0) Gecko\/20100101 Firefox\/47./;"	k	section:protocol.https
+antiring	.config/mpv/mpv.conf	/^cscale-antiring=0.0$/;"	k	section:low-quality
+antiring	.config/mpv/mpv.conf	/^cscale-antiring=0.7$/;"	k	section:high-quality
+antiring	.config/mpv/mpv.conf	/^cscale-antiring=1.0$/;"	k	section:mid-quality
+antiring	.config/mpv/mpv.conf	/^scale-antiring=0.0$/;"	k	section:low-quality
+antiring	.config/mpv/mpv.conf	/^scale-antiring=0.7$/;"	k	section:high-quality
+antiring	.config/mpv/mpv.conf	/^scale-antiring=1.0$/;"	k	section:mid-quality
+args	.vim/coc-settings.json	/^    "args" : ["up", "--method", "stdio"],$/;"	a	object:languageserver.sql
+auto	.config/mpv/mpv.conf	/^audio-file-auto=fuzzy                   # external audio doesn't has to match the file name exac/;"	k
+auto	.config/mpv/mpv.conf	/^sub-auto=fuzzy                          # external subs don't have to match the file name exactl/;"	k
+autohide	.config/mpv/mpv.conf	/^cursor-autohide=1000                    # autohide the curser after 1s$/;"	k
+backbuffer	.config/mpv/mpv.conf	/^cache-backbuffer=25000                  # size in KB$/;"	k
+bitrate	.config/mpv/mpv.conf	/^hls-bitrate=max                         # use max quality for HLS streams$/;"	k
+cache	.config/mpv/mpv.conf	/^cache=no$/;"	k	section:extension.gif
+cache	.config/mpv/mpv.conf	/^cache=yes$/;"	k
+codepage	.config/mpv/mpv.conf	/^sub-codepage=enca:zh:utf8:gb18030       # for support Chinese$/;"	k
+color	.config/mpv/mpv.conf	/^osd-border-color='#DD322640'            # ARGB format$/;"	k
+color	.config/mpv/mpv.conf	/^osd-color='#CCFFFFFF'                   # ARGB format$/;"	k
+command	.vim/coc-settings.json	/^    "command": "gopls",$/;"	s	object:languageserver.golang
+command	.vim/coc-settings.json	/^    "command": "sql-language-server",$/;"	s	object:languageserver.sql
+complete	.vimrc	/^augroup complete$/;"	a
+complete	forwindows/_vimrc	/^augroup complete$/;"	a
+compression	.config/mpv/mpv.conf	/^screenshot-png-compression=8$/;"	k
+correction	.config/mpv/mpv.conf	/^audio-pitch-correction=yes              # automatically insert scaletempo when playing with high/;"	k
+cp	.vimrc	/^noremap cp yap<S-}>p$/;"	m
+cp	forwindows/_vimrc	/^noremap cp yap<S-}>p$/;"	m
+cscale	.config/mpv/mpv.conf	/^cscale=bilinear$/;"	k	section:60FPS
+cscale	.config/mpv/mpv.conf	/^cscale=bilinear$/;"	k	section:low-quality
+cscale	.config/mpv/mpv.conf	/^cscale=bilinear$/;"	k	section:mid-quality
+cscale	.config/mpv/mpv.conf	/^cscale=ewa_lanczossoft$/;"	k	section:high-quality
+deband	.config/mpv/mpv.conf	/^deband=no$/;"	k	section:low-quality
+deband	.config/mpv/mpv.conf	/^deband=yes$/;"	k	section:high-quality
+deband	.config/mpv/mpv.conf	/^deband=yes$/;"	k	section:mid-quality
+default	.config/mpv/mpv.conf	/^[default]$/;"	s
+default	.config/mpv/mpv.conf	/^cache-default=81960                     # size in KB  BTW: before is 8000000 it is too big$/;"	k
+deinterlace	.config/mpv/mpv.conf	/^deinterlace=auto                        # 'auto' does not imply interlacing-detection$/;"	k
+depth	.config/mpv/mpv.conf	/^dither-depth=auto$/;"	k	section:high-quality
+depth	.config/mpv/mpv.conf	/^dither-depth=auto$/;"	k	section:mid-quality
+depth	.config/mpv/mpv.conf	/^dither-depth=no$/;"	k	section:low-quality
+desc	.config/mpv/mpv.conf	/^profile-desc=cond:(is_laptop() and not on_battery() and get('width', math.huge) &lt; 1920) or (i/;"	k	section:mid-quality
+desc	.config/mpv/mpv.conf	/^profile-desc=cond:get('width', -math.huge) &gt;= 3840$/;"	k	section:4K
+desc	.config/mpv/mpv.conf	/^profile-desc=cond:get('width', -math.huge) &lt; 3840$/;"	k	section:4K-inverted
+desc	.config/mpv/mpv.conf	/^profile-desc=cond:is_desktop() and get('width', math.huge) &lt; 3840$/;"	k	section:high-quality
+desc	.config/mpv/mpv.conf	/^profile-desc=cond:is_laptop() and (on_battery() or get('width', math.huge) &gt;= 1920)$/;"	k	section:low-quality
+desc	.config/mpv/mpv.conf	/^profile-desc=cond:is_laptop() and get('container-fps', 0) &gt;= 59$/;"	k	section:60FPS
+disableWorkspaceFolders	.vim/coc-settings.json	/^    "disableWorkspaceFolders": true,$/;"	b	object:languageserver.golang
+downscaling	.config/mpv/mpv.conf	/^correct-downscaling=no$/;"	k	section:low-quality
+downscaling	.config/mpv/mpv.conf	/^correct-downscaling=yes$/;"	k	section:high-quality
+downscaling	.config/mpv/mpv.conf	/^correct-downscaling=yes$/;"	k	section:mid-quality
+dscale	.config/mpv/mpv.conf	/^dscale=bilinear$/;"	k	section:low-quality
+dscale	.config/mpv/mpv.conf	/^dscale=mitchell$/;"	k	section:high-quality
+dscale	.config/mpv/mpv.conf	/^dscale=mitchell$/;"	k	section:mid-quality
+duration	.config/mpv/mpv.conf	/^osd-duration=2500                       # hide the osd after x ms$/;"	k
+embeddedfonts	.config/mpv/mpv.conf	/^embeddedfonts=yes                       # use embedded fonts for SSA\/ASS subs$/;"	k
+extension.gif	.config/mpv/mpv.conf	/^[extension.gif]$/;"	s
+extension.webm	.config/mpv/mpv.conf	/^[extension.webm]$/;"	s
+file	.config/mpv/mpv.conf	/^loop-file=yes$/;"	k	section:extension.gif
+filetypes	.vim/coc-settings.json	/^    "filetypes": ["go"]$/;"	a	object:languageserver.golang
+filetypes	.vim/coc-settings.json	/^    "filetypes": ["sql", "mysql"]$/;"	a	object:languageserver.sql
+font	.config/mpv/mpv.conf	/^osd-font='Source Sans Pro'$/;"	k
+format	.config/mpv/mpv.conf	/^screenshot-format=png$/;"	k
+g:airline#extensions#tabline#enabled	.vimrc	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:airline#extensions#tabline#enabled	forwindows/_vimrc	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:airline_powerline_fonts	.vimrc	/^let g:airline_powerline_fonts = 1$/;"	v
+g:airline_powerline_fonts	forwindows/_vimrc	/^let g:airline_powerline_fonts = 1$/;"	v
+g:airline_symbols	.vimrc	/^  let g:airline_symbols = {}$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.branch = '??'$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.crypt = '??'$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.linenr = ''$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.maxlinenr = '??'$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.notexists = ''$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.paste = ''$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.spell = 'SPELL'$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.whitespace = '??'$/;"	v
+g:airline_symbols	forwindows/_vimrc	/^  let g:airline_symbols = {}$/;"	v
+g:airline_symbols	forwindows/_vimrc	/^let g:airline_symbols.branch = '??'$/;"	v
+g:airline_symbols	forwindows/_vimrc	/^let g:airline_symbols.crypt = '??'$/;"	v
+g:airline_symbols	forwindows/_vimrc	/^let g:airline_symbols.linenr = ''$/;"	v
+g:airline_symbols	forwindows/_vimrc	/^let g:airline_symbols.maxlinenr = '??'$/;"	v
+g:airline_symbols	forwindows/_vimrc	/^let g:airline_symbols.notexists = ''$/;"	v
+g:airline_symbols	forwindows/_vimrc	/^let g:airline_symbols.paste = ''$/;"	v
+g:airline_symbols	forwindows/_vimrc	/^let g:airline_symbols.readonly = '??'$/;"	v
+g:airline_symbols	forwindows/_vimrc	/^let g:airline_symbols.spell = 'SPELL'$/;"	v
+g:airline_symbols	forwindows/_vimrc	/^let g:airline_symbols.whitespace = '??'$/;"	v
+g:autoformat_verbosemode	.vimrc	/^let g:autoformat_verbosemode=1$/;"	v
+g:autoformat_verbosemode	forwindows/_vimrc	/^let g:autoformat_verbosemode=1$/;"	v
+g:autopep8_disable_show_diff	.vimrc	/^let g:autopep8_disable_show_diff=1$/;"	v
+g:autopep8_disable_show_diff	forwindows/_vimrc	/^let g:autopep8_disable_show_diff=1$/;"	v
+g:coc_global_extensions	.vimrc	/^let g:coc_global_extensions = ['coc-python','coc-go','coc-git','coc-clangd','coc-json','coc-r-ls/;"	v
+g:ctrlsf_backend	.vimrc	/^let g:ctrlsf_backend = 'ack'$/;"	v
+g:fzf_action	.vimrc	/^let g:fzf_action = { 'ctrl-e': 'edit' }$/;"	v
+g:go_highlight_build_constraints	.vimrc	/^let g:go_highlight_build_constraints = 1$/;"	v
+g:go_highlight_functions	.vimrc	/^let g:go_highlight_functions = 1$/;"	v
+g:go_highlight_methods	.vimrc	/^let g:go_highlight_methods = 1$/;"	v
+g:go_highlight_operators	.vimrc	/^let g:go_highlight_operators = 1$/;"	v
+g:go_highlight_structs	.vimrc	/^let g:go_highlight_structs = 1$/;"	v
+g:indentLine_char	.vimrc	/^let g:indentLine_char='┆'$/;"	v
+g:indentLine_char	forwindows/_vimrc	/^let g:indentLine_char='┆'$/;"	v
+g:indentLine_enabled	.vimrc	/^let g:indentLine_enabled = 1$/;"	v
+g:indentLine_enabled	forwindows/_vimrc	/^let g:indentLine_enabled = 1$/;"	v
+g:instant_markdown_autostart	.vimrc	/^let g:instant_markdown_autostart = 0$/;"	v
+g:netrw_nogx	.vimrc	/^let g:netrw_nogx = 1 " disable netrw's gx mapping.$/;"	v
+g:os	.vimrc	/^    let g:os  = 'Windows'$/;"	v
+g:os	.vimrc	/^    let g:os  = substitute( system( 'uname' ), '\\n', '', '')$/;"	v
+g:os	.vimrc	/^    let g:os = 'Cygwin'$/;"	v
+g:quickrun_config	.vimrc	/^let g:quickrun_config = {$/;"	v
+g:quickrun_no_default_key_mappings	.vimrc	/^let g:quickrun_no_default_key_mappings = 1$/;"	v
+g:rainbow_active	.vimrc	/^let g:rainbow_active = 1$/;"	v
+g:solarized_termcolors	.vimrc	/^  let g:solarized_termcolors=256$/;"	v
+g:solarized_termcolors	.vimrc	/^let g:solarized_termcolors=256    "solarized主题设置在终端下的设置"$/;"	v
+g:solarized_termcolors	forwindows/_vimrc	/^  let g:solarized_termcolors=256$/;"	v
+g:solarized_termcolors	forwindows/_vimrc	/^let g:solarized_termcolors=256    "solarized主题设置在终端下的设置"$/;"	v
+g:solarized_termtrans	.vimrc	/^  let g:solarized_termtrans=1$/;"	v
+g:solarized_termtrans	forwindows/_vimrc	/^  let g:solarized_termtrans=1$/;"	v
+g:syntastic_aggregate_errors	.vimrc	/^  let g:syntastic_aggregate_errors = 1$/;"	v
+g:syntastic_aggregate_errors	forwindows/_vimrc	/^  let g:syntastic_aggregate_errors = 1$/;"	v
+g:syntastic_always_populate_loc_list	.vimrc	/^  let g:syntastic_always_populate_loc_list = 1$/;"	v
+g:syntastic_always_populate_loc_list	forwindows/_vimrc	/^  let g:syntastic_always_populate_loc_list = 1$/;"	v
+g:syntastic_auto_loc_list	.vimrc	/^  let g:syntastic_auto_loc_list = 1$/;"	v
+g:syntastic_auto_loc_list	forwindows/_vimrc	/^  let g:syntastic_auto_loc_list = 1$/;"	v
+g:syntastic_check_on_open	.vimrc	/^  let g:syntastic_check_on_open = 1$/;"	v
+g:syntastic_check_on_open	forwindows/_vimrc	/^  let g:syntastic_check_on_open = 1$/;"	v
+g:syntastic_check_on_wq	.vimrc	/^  let g:syntastic_check_on_wq = 0$/;"	v
+g:syntastic_check_on_wq	forwindows/_vimrc	/^  let g:syntastic_check_on_wq = 0$/;"	v
+g:syntastic_tex_checkers	.vimrc	/^  let g:syntastic_tex_checkers = ['chktex' ]$/;"	v
+g:syntastic_tex_checkers	forwindows/_vimrc	/^  let g:syntastic_tex_checkers = ['chktex' ]$/;"	v
+g:syntastic_text_checkers	.vimrc	/^  let g:syntastic_text_checkers = ['language_check']$/;"	v
+g:syntastic_text_checkers	forwindows/_vimrc	/^  let g:syntastic_text_checkers = ['language_check']$/;"	v
+g:syntastic_text_language_check_args	.vimrc	/^  let g:syntastic_text_language_check_args = '--language=en-US'$/;"	v
+g:syntastic_text_language_check_args	forwindows/_vimrc	/^  let g:syntastic_text_language_check_args = '--language=en-US'$/;"	v
+g:user_emmet_expandabbr_key	.vimrc	/^let g:user_emmet_expandabbr_key = '<F2>'$/;"	v
+g:user_emmet_install_global	.vimrc	/^let g:user_emmet_install_global = 0$/;"	v
+g:user_emmet_leader_key	.vimrc	/^let g:user_emmet_leader_key = '<C-e>'$/;"	v
+g:user_emmet_mode	.vimrc	/^let g:user_emmet_mode='a'    "enable all function in all mode.$/;"	v
+g:user_emmet_mode	.vimrc	/^let g:user_emmet_mode='inv'  "enable all functions, which is equal to$/;"	v
+g:user_emmet_mode	.vimrc	/^let g:user_emmet_mode='n'    "only enable normal mode functions.$/;"	v
+g:workspace_autocreate	.vimrc	/^  let g:workspace_autocreate =1$/;"	v
+g:workspace_autocreate	forwindows/_vimrc	/^  let g:workspace_autocreate =1$/;"	v
+g:workspace_autosave	.vimrc	/^  let g:workspace_autosave = 0$/;"	v
+g:workspace_autosave	forwindows/_vimrc	/^  let g:workspace_autosave = 0$/;"	v
+g:workspace_session_name	.vimrc	/^    let g:workspace_session_name = 'gsession.vim'$/;"	v
+g:workspace_session_name	.vimrc	/^    let g:workspace_session_name = 'session.vim'$/;"	v
+g:workspace_session_name	forwindows/_vimrc	/^    let g:workspace_session_name = 'gsession.vim'$/;"	v
+g:workspace_session_name	forwindows/_vimrc	/^    let g:workspace_session_name = 'session.vim'$/;"	v
+g:workspace_undodir	.vimrc	/^  let g:workspace_undodir=$USRTEMPD . 'undodir'$/;"	v
+g:workspace_undodir	forwindows/_vimrc	/^  let g:workspace_undodir=$USRTEMPD . 'undodir'$/;"	v
+g:ycm_autoclose_preview_window_after_completion	.vimrc	/^let g:ycm_autoclose_preview_window_after_completion=1$/;"	v
+g:ycm_autoclose_preview_window_after_completion	forwindows/_vimrc	/^let g:ycm_autoclose_preview_window_after_completion=1$/;"	v
+g:ycm_cache_omnifunc	.vimrc	/^let g:ycm_cache_omnifunc=0$/;"	v
+g:ycm_cache_omnifunc	forwindows/_vimrc	/^let g:ycm_cache_omnifunc=0$/;"	v
+g:ycm_collect_identifiers_from_comments_and_strings	.vimrc	/^let g:ycm_collect_identifiers_from_comments_and_strings = 0$/;"	v
+g:ycm_collect_identifiers_from_comments_and_strings	forwindows/_vimrc	/^let g:ycm_collect_identifiers_from_comments_and_strings = 0$/;"	v
+g:ycm_complete_in_comments	.vimrc	/^let g:ycm_complete_in_comments=1$/;"	v
+g:ycm_complete_in_comments	forwindows/_vimrc	/^let g:ycm_complete_in_comments=1$/;"	v
+g:ycm_complete_in_strings	.vimrc	/^let g:ycm_complete_in_strings = 1$/;"	v
+g:ycm_complete_in_strings	forwindows/_vimrc	/^let g:ycm_complete_in_strings = 1$/;"	v
+g:ycm_min_num_of_chars_for_completion	.vimrc	/^let g:ycm_min_num_of_chars_for_completion=2$/;"	v
+g:ycm_min_num_of_chars_for_completion	forwindows/_vimrc	/^let g:ycm_min_num_of_chars_for_completion=2$/;"	v
+g:ycm_path_to_python_interpreter	.vimrc	/^let g:ycm_path_to_python_interpreter='\/usr\/bin\/python'$/;"	v
+g:ycm_path_to_python_interpreter	forwindows/_vimrc	/^let g:ycm_path_to_python_interpreter='python'$/;"	v
+g:ycm_seed_identifiers_with_syntax	.vimrc	/^let g:ycm_seed_identifiers_with_syntax=1$/;"	v
+g:ycm_seed_identifiers_with_syntax	forwindows/_vimrc	/^let g:ycm_seed_identifiers_with_syntax=1$/;"	v
+ga	.vimrc	/^nmap ga <Plug>(EasyAlign)$/;"	m
+ga	.vimrc	/^xmap ga <Plug>(EasyAlign)$/;"	m
+ga	forwindows/_vimrc	/^nmap ga <Plug>(EasyAlign)$/;"	m
+ga	forwindows/_vimrc	/^xmap ga <Plug>(EasyAlign)$/;"	m
+geometry	.config/mpv/mpv.conf	/^geometry=50%$/;"	k
+global	.pip/pip.conf	/^[global]$/;"	s
+golang	.vim/coc-settings.json	/^  "golang": {$/;"	o	object:languageserver
+gx	.vimrc	/^nmap gx <Plug>(openbrowser-smart-search)$/;"	m
+gx	.vimrc	/^vmap gx <Plug>(openbrowser-smart-search)$/;"	m
+h	.config/mpv/mpv.conf	/^osd-bar-h=2                             # height of osd bar as a fractional percentage of your s/;"	k
+high-quality	.config/mpv/mpv.conf	/^[high-quality]$/;"	s
+host	.pip/pip.conf	/^trusted-host=mirrors.aliyun.com$/;"	k	section:install
+hwdec	.config/mpv/mpv.conf	/^hwdec=auto$/;"	k
+initial	.config/mpv/mpv.conf	/^cache-initial=0                         # start playback when your cache is filled up with x kB$/;"	k
+install	.pip/pip.conf	/^[install]$/;"	s
+jk	.vimrc	/^inoremap jk <Esc>$/;"	m
+jk	forwindows/_vimrc	/^inoremap jk <Esc>$/;"	m
+keys	.config/mpv/mpv.conf	/^input-media-keys=no                     # enable\/disable OSX media keys$/;"	k
+languageserver	.vim/coc-settings.json	/^"languageserver": {$/;"	o
+larger	.config/mpv/mpv.conf	/^autofit-larger=100%x95%                 # resize window in case it's larger than W%xH% of the sc/;"	k
+level	.config/mpv/mpv.conf	/^osd-level=1                             # enable osd and display --osd-status-msg on interaction$/;"	k
+low-quality	.config/mpv/mpv.conf	/^[low-quality]$/;"	s
+mapleader	.vimrc	/^let mapleader=","$/;"	v
+max	.config/mpv/mpv.conf	/^volume-max=200                          # maximum volume in %, everything above 100 results in a/;"	k
+mid-quality	.config/mpv/mpv.conf	/^[mid-quality]$/;"	s
+msg	.config/mpv/mpv.conf	/^osd-status-msg='${time-pos} \/ ${duration}${?percent-pos:　(${percent-pos}%)}${?vo-drop-frame-c/;"	k
+myvimrc	.vimrc	/^augroup myvimrc$/;"	a
+myvimrc	forwindows/_vimrc	/^augroup myvimrc$/;"	a
+nw	.vimrc	/^nnoremap nw <C-w><C-w>$/;"	m
+nw	forwindows/_vimrc	/^nnoremap nw <C-w><C-w>$/;"	m
+ontop	.config/mpv/mpv.conf	/^ontop=yes$/;"	k
+options	.config/mpv/mpv.conf	/^ytdl-raw-options=format="[protocol!=http_dash_segments][protocol!=rtmp]"$/;"	k
+password	.jupyter/jupyter_notebook_config.json	/^    "password": "argon2:$argon2id$v=19$m=10240,t=10,p=8$oIZST9g5hqjsA4jfSBMKVQ$PGP\/8gIk91mnorh+/;"	s	object:NotebookApp
+paths	.config/mpv/mpv.conf	/^sub-paths=ass:srt:sub:subs:subtitles    # search for external subs in the listed subdirectories$/;"	k
+protocol.http	.config/mpv/mpv.conf	/^[protocol.http]$/;"	s
+protocol.https	.config/mpv/mpv.conf	/^[protocol.https]$/;"	s
+quit	.config/mpv/mpv.conf	/^save-position-on-quit=yes$/;"	k
+rootPatterns	.vim/coc-settings.json	/^    "rootPatterns": ["go.mod"],$/;"	a	object:languageserver.golang
+scale	.config/mpv/mpv.conf	/^scale=bilinear$/;"	k	section:60FPS
+scale	.config/mpv/mpv.conf	/^scale=bilinear$/;"	k	section:low-quality
+scale	.config/mpv/mpv.conf	/^scale=ewa_lanczossharp$/;"	k	section:high-quality
+scale	.config/mpv/mpv.conf	/^scale=spline36$/;"	k	section:mid-quality
+secs	.config/mpv/mpv.conf	/^cache-secs=10                           # how many seconds of audio\/video to prefetch if the ca/;"	k
+secs	.config/mpv/mpv.conf	/^cache-secs=100                          # how many seconds of audio\/video to prefetch$/;"	k	section:protocol.http
+secs	.config/mpv/mpv.conf	/^cache-secs=100                          # how many seconds of audio\/video to prefetch$/;"	k	section:protocol.https
+size	.config/mpv/mpv.conf	/^osd-border-size=2                       # size for osd text and progress bar$/;"	k
+size	.config/mpv/mpv.conf	/^osd-font-size=32$/;"	k
+size	.config/mpv/mpv.conf	/^sub-font-size=48            # Font Size UPDATE: 2017-02-20$/;"	k
+slang	.config/mpv/mpv.conf	/^slang=enm,en,eng,zh,chi             # automatically select these subtitles (decreasing priority)$/;"	k
+sql	.vim/coc-settings.json	/^  "sql": {$/;"	o	object:languageserver
+style	.config/mpv/mpv.conf	/^sub-ass-force-style=Kerning=yes         # allows you to override style parameters of ASS scripts$/;"	k
+template	.config/mpv/mpv.conf	/^screenshot-template='~\/Desktop\/%F (%P) %n'$/;"	k
+threads	.config/mpv/mpv.conf	/^vd-lavc-threads=0$/;"	k	section:4K-inverted
+threads	.config/mpv/mpv.conf	/^vd-lavc-threads=32$/;"	k	section:4K
+timing	.config/mpv/mpv.conf	/^sub-fix-timing=no                       # do not try to fix gaps (which might make it worse in s/;"	k
+tscale	.config/mpv/mpv.conf	/^tscale=linear$/;"	k
+upscaling	.config/mpv/mpv.conf	/^sigmoid-upscaling=no$/;"	k	section:low-quality
+upscaling	.config/mpv/mpv.conf	/^sigmoid-upscaling=yes$/;"	k	section:high-quality
+upscaling	.config/mpv/mpv.conf	/^sigmoid-upscaling=yes$/;"	k	section:mid-quality
+url	.pip/pip.conf	/^index-url = https:\/\/mirrors.aliyun.com\/pypi\/simple\/$/;"	k	section:global
+vertichelp	.vimrc	/^augroup vertichelp$/;"	a
+vertichelp	forwindows/_vimrc	/^augroup vertichelp$/;"	a
+vo	.config/mpv/mpv.conf	/^vo=opengl$/;"	k
+volume	.config/mpv/mpv.conf	/^volume=80                              # default volume, 100 = unchanged$/;"	k
+w	.config/mpv/mpv.conf	/^osd-bar-w=60                            # width of " " "$/;"	k
+workdir	.vimrc	/^  augroup workdir$/;"	a
+workdir	forwindows/_vimrc	/^  augroup workdir$/;"	a
+ww	.vimrc	/^nnoremap ww <C-W>q$/;"	m
+ww	forwindows/_vimrc	/^nnoremap ww <C-W>q$/;"	m
+y	.config/mpv/mpv.conf	/^osd-bar-align-y=0                       # progress bar y alignment (-1 top, 0 centered, 1 bottom/;"	k
