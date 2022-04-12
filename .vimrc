@@ -12,7 +12,9 @@ if !exists( 'g:os' )
 endif
 
 " 前缀键修改
+set showcmd
 let mapleader=","
+let maplocalleader = ';'
 " USER Variable ------------------------------
 let $VIMHOME=expand( $HOME . '/.vim/' )
 let $USRVIMD=expand( $VIMHOME . 'myvim/' )
@@ -109,7 +111,7 @@ set autoread
 set cursorline        "突出显示当前行"
 set cursorcolumn        "突出显示当前列"
 set nocp
-
+set clipboard=exclude:.*   "禁用系统剪切板共享，否则会因为X11 Forwarding降低启动速度"
 " Auto change to the current directory 
 set acd
 
@@ -227,7 +229,7 @@ if !empty( glob( expand( $VIMHOME . 'autoload/plug.vim' ) ) )
     Plug 'Chiel92/vim-autoformat'
     Plug 'jiangmiao/auto-pairs'
     Plug 'godlygeek/tabular'
-    Plug 'plasticboy/vim-markdown'
+    Plug 'plasticboy/vim-markdown',{'for': 'markdown'}
     "yaourt nodejs npm ,sudo npm -g install instant-markdown-d"
     Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
     Plug 'kannokanno/previm'
@@ -237,6 +239,7 @@ if !empty( glob( expand( $VIMHOME . 'autoload/plug.vim' ) ) )
     Plug 'majutsushi/tagbar'
     Plug 'ludovicchabant/vim-gutentags'
     Plug 'derekwyatt/vim-scala'
+    Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
     Plug 'artur-shaik/vim-javacomplete2'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'tell-k/vim-autopep8'
@@ -245,6 +248,7 @@ if !empty( glob( expand( $VIMHOME . 'autoload/plug.vim' ) ) )
     Plug 'leafgarland/typescript-vim'
     Plug 'elzr/vim-json'
     Plug 'MaxMEllon/vim-jsx-pretty'
+    Plug 'dstein64/vim-startuptime'
   call plug#end()
 endif
 
@@ -303,6 +307,43 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+" nvim-r----------------------------------------
+let R_path = '/usr/bin'
+"let R_external_term = 0
+command RStart let oldft=&ft | set ft=r | exe 'set ft='.oldft | let b:IsInRCode = function("DefaultIsInRCode") | normal <LocalLeader>rf
+nmap <silent> <LocalLeader>rk :call RStart<CR>
+"" Use Ctrl+Space to do omnicompletion:
+if has('nvim') || has('gui_running')
+    inoremap <C-Space> <C-x><C-o>
+else
+    inoremap <Nul> <C-x><C-o>
+endif
+
+" Press the space bar to send lines and selection to R:
+vmap <Space> <Plug>RDSendSelection
+nmap <Space> <Plug>RDSendLine
+if has('gui_running') || &termguicolors
+  let rout_color_input    = 'guifg=#9e9e9e'
+  let rout_color_normal   = 'guifg=#ff5f00'
+  let rout_color_number   = 'guifg=#ffaf00'
+  let rout_color_integer  = 'guifg=#feaf00'
+  let rout_color_float    = 'guifg=#fdaf00'
+  let rout_color_complex  = 'guifg=#fcaf00'
+  let rout_color_negnum   = 'guifg=#d7afff'
+  let rout_color_negfloat = 'guifg=#d6afff'
+  let rout_color_date     = 'guifg=#00d7af'
+  let rout_color_true     = 'guifg=#5dd685'
+  let rout_color_false    = 'guifg=#ff5d5e'
+  let rout_color_inf      = 'guifg=#10aed7'
+  let rout_color_constant = 'guifg=#5fafcf'
+  let rout_color_string   = 'guifg=#5fd7af'
+  let rout_color_error    = 'guifg=#ffffff guibg=#c40000'
+  let rout_color_warn     = 'guifg=#d00000'
+  let rout_color_index    = 'guifg=#d0d080'
+endif
+nmap <silent> <LocalLeader>vl :call RAction("viewobj", ", howto='aboveleft vsp'")<CR>
+nmap <silent> <LocalLeader>vt :call RAction("viewobj", ", howto='topleft 11sp', nrows=10")<CR>
 
 " Airline configuration ------------------------------
 let g:airline_powerline_fonts = 1
@@ -471,4 +512,3 @@ augroup myvimrc
   au!
   au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_runing') | so $MYGVIMRC | endif
 augroup END
-

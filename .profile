@@ -52,3 +52,4 @@ export FABRIC_CFG_PATH=$FABRIC_PATH/config/
 
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$FABRIC_PATH/bin:/usr/local/go/bin:/usr/local/emsdk:/usr/local/emsdk/node/14.15.5_64bit/bin:/usr/local/emsdk/upstream/emscripten:$PATH"
 #source "/usr/local/emsdk/emsdk_env.sh"
+export GPG_TTY=$(tty)
