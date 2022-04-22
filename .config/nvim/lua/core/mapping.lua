@@ -166,6 +166,9 @@ mapping.global = {
         {{"n"}, "<leader>pi", "<cmd>PackerInstall<cr>", "noremap|silent"},
         {{"n"}, "<leader>pr", "<cmd>PackerCompile<cr>", "noremap|silent"}
     },
+    nvim_markdown_preview= {
+        {{"n"}, "<leader>mr", ":<cmd>MarkdownPreview<cr>", "noremap|silent"}
+    },
     code_runner = {
         {{"n"}, "<leader>rr", ":<cmd>RunCode<cr><cr>", "noremap|silent"}
     },

@@ -10,10 +10,9 @@ export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE="fcitx"
 export QT_IM_MODULE="fcitx"
 
+alias vi="nvim"
+alias vim="nvim"
 alias sysupdate="sudo eix-sync &&sudo emerge -avuDN world"
-alias vi="nvim" 
-alias vim="nvim" 
-alias xxnet="sudo /usr/local/XX-Net/start &"
 alias ampps="sudo /usr/local/ampps/Ampps"
 alias kali="ssh -X 192.168.56.2 -l root"
 alias mycliL="mycli -u root -p 111111qQ -h 127.0.0.1 --local-infile 1"
@@ -42,12 +41,6 @@ export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 alias pysparksh="pyspark --master spark://localhost:7077 --num-executors 3 --driver-memory 1g --executor-memory 1g --executor-cores 1"
 
 alias startopenvas="sudo systemctl restart redis && sudo systemctl restart openvas-scanner && sudo openvasmd -p 9390 -a 127.0.0.1 && sudo gsad -f --listen=127.0.0.1 --mlisten=127.0.0.1 --mport=9390"
-
-alias condas="source /usr/local/anaconda3/bin/activate root"
-alias condae="conda deactivate "
-
-export GO111MODULE=auto
-export GOPROXY=https://goproxy.cn
 
 export FABRIC_PATH=/usr/local/fabric-samples
 export FABRIC_CFG_PATH=$FABRIC_PATH/config/
