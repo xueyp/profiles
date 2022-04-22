@@ -15,7 +15,11 @@ api.hi.set("debugger", {fg = "red"})
 -- load debugger configuration
 local dap_config = {
     python = require("configure.dap.python"),
-    go = require("configure.dap.go")
+    go = require("configure.dap.go"),
+    c = require("configure.dap.lldb"),
+    lldb = require("configure.dap.lldb"),
+    cpp = require("configure.dap.lldb"),
+    rust = require("configure.dap.lldb")
 }
 
 -- apply debugger configuration

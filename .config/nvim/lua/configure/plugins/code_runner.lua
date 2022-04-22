@@ -11,6 +11,7 @@ require('code_runner').setup {
 		python = "/home/x/venvs/quant/bin/python",
 		typescript = "deno run",
 		rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt",
-        r = "Rscript $fileName"
+        r = "Rscript $fileName",
+		go = "go run $fileName"
 	}
 }
