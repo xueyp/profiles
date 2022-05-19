@@ -1,45 +1,55 @@
-# /etc/profile
+# /etc/profile: login shell setup
+#
+# That this file is used by any Bourne-shell derivative to setup the
+# environment for login shells.
+#
 
-# Set our umask
+# Load environment settings from profile.env, which is created by
+# env-update from the files in /etc/env.d
+if [ -e /etc/profile.env ] ; then
+	. /etc/profile.env
+fi
+
+# You should override these in your ~/.bashrc (or equivalent) for per-user
+# settings.  For system defaults, you can add a new file in /etc/profile.d/.
+export EDITOR=${EDITOR:-/bin/nano}
+export PAGER=${PAGER:-/usr/bin/less}
+
+# 077 would be more secure, but 022 is generally quite realistic
 umask 022
 
-# Append our default paths
-appendpath () {
-    case ":$PATH:" in
-        *:"$1":*)
-            ;;
-        *)
-            PATH="${PATH:+$PATH:}$1"
-    esac
-}
+unset ROOTPATH
 
-appendpath '/usr/local/sbin'
-appendpath '/usr/local/bin'
-appendpath '/usr/bin'
-unset appendpath
+# process *.sh files in /etc/profile.d
+for sh in /etc/profile.d/*.sh ; do
+	[ -r "$sh" ] && . "$sh"
+done
+unset sh
 
-export PATH
-
-# Load profiles from /etc/profile.d
-if test -d /etc/profile.d/; then
-	for profile in /etc/profile.d/*.sh; do
-		test -r "$profile" && . "$profile"
-	done
-	unset profile
+if [ -n "${BASH_VERSION-}" ] ; then
+	# Newer bash ebuilds include /etc/bash/bashrc which will setup PS1
+	# including color.  We leave out color here because not all
+	# terminals support it.
+	if [ -f /etc/bash/bashrc ] ; then
+		# Bash login shells run only /etc/profile
+		# Bash non-login shells run only /etc/bash/bashrc
+		# Since we want to run /etc/bash/bashrc regardless, we source it 
+		# from here.  It is unfortunate that there is no way to do 
+		# this *after* the user's .bash_profile runs (without putting 
+		# it in the user's dot-files), but it shouldn't make any 
+		# difference.
+		. /etc/bash/bashrc
+	else
+		PS1='\u@\h \w \$ '
+	fi
+else
+	# Setup a bland default prompt.  Since this prompt should be useable
+	# on color and non-color terminals, as well as shells that don't
+	# understand sequences such as \h, don't put anything special in it.
+	PS1="${USER:-$(whoami 2>/dev/null)}@$(uname -n 2>/dev/null) \$ "
 fi
 
-# Source global bash config
-if test "$PS1" && test "$BASH" && test -z ${POSIXLY_CORRECT+x} && test -r /etc/bash.bashrc; then
-	. /etc/bash.bashrc
-fi
-
-# Termcap is outdated, old, and crusty, kill it.
-unset TERMCAP
-
-# Man is much better than us at figuring this out
-unset MANPATH
-
-export EDITOR=vim
+export EDITOR=nvim
 export JAVA_HOME=/usr/local/jdk
 export JRE_HOME=/usr/local/jdk/jre
 export SCALA_HOME=/usr/local/scala
@@ -52,4 +62,5 @@ export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export SPARK_HOME=/usr/local/spark
 export CLASSPATH="./:$JAVA_HOME/lib:$JRE_HOME/lib"
-export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SCALA_HOME/bin:$SPARK_HOME/bin:/usr/local/sbt/bin:/usr/local/cassandra/bin:/usr/local/kafka/bin:/usr/local/mongodb/bin:/usr/local/es/bin:$JAVA_HOME/bin
+export PATH=$PATH:$GOROOT/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SCALA_HOME/bin:$SPARK_HOME/bin:/usr/local/sbt/bin:/usr/local/cassandra/bin:/usr/local/kafka/bin:/usr/local/mongodb/bin:/usr/local/es/bin:$JAVA_HOME/bin
+

@@ -17,6 +17,7 @@ alias ampps="sudo /usr/local/ampps/Ampps"
 alias kali="ssh -X 192.168.56.2 -l root"
 alias mycliL="mycli -u root -p 111111qQ -h 127.0.0.1 --local-infile 1"
 alias pgcliL="pgcli -u postgres "
+alias featmap="cd /usr/local/bin && ./featmap-2.1.0-linux-amd64 &"
 
 alias mongodbs="mongod --dbpath /home/x/mongodbdata/db --logpath /home/x/mongodbdata/logs"
 alias elasticsearch="/usr/local/es/bin/elasticsearch"
@@ -44,7 +45,11 @@ alias startopenvas="sudo systemctl restart redis && sudo systemctl restart openv
 
 export FABRIC_PATH=/usr/local/fabric-samples
 export FABRIC_CFG_PATH=$FABRIC_PATH/config/
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
 
-export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$FABRIC_PATH/bin:/usr/local/go/bin:/usr/local/emsdk:/usr/local/emsdk/node/14.15.5_64bit/bin:/usr/local/emsdk/upstream/emscripten:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$FABRIC_PATH/bin:$GOROOT/bin:$GOPATH/bin:/usr/local/emsdk:/usr/local/emsdk/node/14.15.5_64bit/bin:/usr/local/emsdk/upstream/emscripten:$PATH"
 #source "/usr/local/emsdk/emsdk_env.sh"
 export GPG_TTY=$(tty)
