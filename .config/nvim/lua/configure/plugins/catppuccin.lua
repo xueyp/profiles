@@ -84,7 +84,7 @@ end
 
 --  bufferline
 api.hi.set("BufferDirectory", {fg = colors.blue, gui = "bold"})
-api.hi.set("BufferIndicator", {fg = colors.black4})
+--api.hi.set("BufferIndicator", {fg = colors.black4})
 
 -- scrollbar
 api.hi.set("ScrollbarHandle", {bg = colors.black4})

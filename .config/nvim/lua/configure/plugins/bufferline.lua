@@ -129,10 +129,10 @@ require("bufferline").setup(
                 guibg = {attribute = "bg", highlight = "Normal"}
             },
             -- split small vertical line on the left
-            indicator_selected = {
-                guifg = {attribute = "fg", highlight = "BufferIndicator"},
-                guibg = {attribute = "bg", highlight = "Normal"}
-            },
+            --indicator_selected = {
+             --   guifg = {attribute = "fg", highlight = "BufferIndicator"},
+            --    guibg = {attribute = "bg", highlight = "Normal"}
+            --},
             -- How to distinguish styles after opening a file with the same name
             duplicate = {
                 gui = "NONE",

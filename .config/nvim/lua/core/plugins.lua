@@ -1,5 +1,11 @@
 local api = require("utils.api")
 local notices = require("utils.notices")
+local plug_url_format = ""
+if vim.g.is_linux then
+  plug_url_format = "https://hub.fastgit.xyz/%s"
+else
+  plug_url_format = "https://github.com/%s"
+end
 
 local packer_install_plugins = {
     -------------
@@ -506,6 +512,7 @@ packer.startup(
             end
         end,
         config = {
+            max_jobs = 16,
             display = {
                 open_fn = require("packer.util").float
             }

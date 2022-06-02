@@ -48,7 +48,7 @@ if vim.g.vscode_style == "dark" then
     api.hi.set("ScrollbarHandle", {bg = colors.vscSplitThumb})
 
     --  bufferline
-    api.hi.set("BufferIndicator", {fg = colors.vscBack})
+    --api.hi.set("BufferIndicator", {fg = colors.vscBack})
     api.hi.set("BufferDirectory", {fg = colors.vscLightBlue, bg = nvim_tree_bg, gui = "bold"})
     api.hi.set("StatusLineNC", {fg = colors.vscFront, bg = status_line_nc_bg})
 
