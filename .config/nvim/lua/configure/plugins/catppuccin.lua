@@ -4,7 +4,7 @@ local options = require("core.options")
 local api = require("utils.api")
 
 local catppuccin = require("catppuccin")
-local colors = require("catppuccin.api.colors").get_colors()
+local colors = require("katppuccin.api.colors").get_colors()
 
 catppuccin.setup(
     {

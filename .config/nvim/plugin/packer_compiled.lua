@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/x/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?.lua;/home/x/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?/init.lua;/home/x/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?.lua;/home/x/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/x/.cache/nvim/packer_hererocks/2.0.5/lib/lua/5.1/?.so"
+local package_path_str = "/home/x/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/x/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/x/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/x/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/x/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -79,7 +79,6 @@ _G.packer_plugins = {
     url = "https://github.com/Pocco81/AutoSave.nvim"
   },
   ["Comment.nvim"] = {
-    after_files = { "/home/x/.local/share/nvim/site/pack/packer/opt/Comment.nvim/after/plugin/Comment.lua" },
     config = { "require('configure/plugins/Comment')" },
     load_after = {
       ["nvim-ts-context-commentstring"] = true
@@ -120,14 +119,6 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/home/x/.local/share/nvim/site/pack/packer/opt/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
-  },
-  catppuccin = {
-    config = { "require('configure/plugins/catppuccin')" },
-    load_after = {},
-    loaded = true,
-    needs_bufread = false,
-    path = "/home/x/.local/share/nvim/site/pack/packer/opt/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
   },
   ["cmp-buffer"] = {
     after_files = { "/home/x/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
@@ -266,9 +257,12 @@ _G.packer_plugins = {
     url = "https://github.com/phaazon/hop.nvim"
   },
   ["impatient.nvim"] = {
-    after = { "surround.nvim", "nvim-treesitter", "AutoSave.nvim", "nvim-lastplace", "nvim-hlslens", "venn.nvim", "nvim-web-devicons", "nvim-ts-context-commentstring", "neoformat", "undotree", "nvim-lspconfig", "vim-dadbod", "nvim-ts-rainbow", "friendly-snippets", "spellsitter.nvim", "nvim-notify", "lsp_signature.nvim", "vim-carbon-now-sh", "indent-blankline.nvim", "persisted.nvim", "nvim-autopairs", "vim-python-pep8-indent", "emmet-vim", "toggleterm.nvim", "vim-startuptime", "vim-illuminate", "fd", "which-key.nvim", "ripgrep", "lspkind-nvim", "nvim-dap", "nvim-colorizer.lua", "translate.nvim", "vimcdoc", "vim-visual-multi", "nvim-markdown-preview", "nvim-scrollbar", "todo-comments.nvim", "switch.vim" },
+    after = { "surround.nvim", "translate.nvim", "todo-comments.nvim", "vim-illuminate", "nvim-markdown-preview", "nvim-lastplace", "nvim-hlslens", "nvim-colorizer.lua", "neoformat", "fd", "ripgrep", "emmet-vim", "nvim-notify", "toggleterm.nvim", "venn.nvim", "persisted.nvim", "nvim-ts-rainbow", "vim-python-pep8-indent", "lsp_signature.nvim", "vim-startuptime", "nvim-treesitter", "nvim-web-devicons", "vim-visual-multi", "nvim-lspconfig", "lspkind-nvim", "friendly-snippets", "nvim-dap", "AutoSave.nvim", "nvim-autopairs", "switch.vim", "vim-carbon-now-sh", "nvim-scrollbar", "nvim-ts-context-commentstring", "undotree", "vim-dadbod", "indent-blankline.nvim", "vimcdoc", "spellsitter.nvim", "which-key.nvim" },
+    config = { "require('configure/plugins/impatient')" },
     loaded = true,
-    only_config = true
+    only_config = true,
+    path = "/home/x/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
   },
   ["indent-blankline.nvim"] = {
     config = { "require('configure/plugins/indent-blankline')" },
@@ -337,7 +331,7 @@ _G.packer_plugins = {
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-vsnip", "vim-dadbod-completion", "cmp-cmdline", "cmp-tabnine", "cmp-buffer", "cmp-path" },
+    after = { "cmp-cmdline", "cmp-tabnine", "cmp-vsnip", "vim-dadbod-completion", "cmp-path", "cmp-buffer" },
     config = { "require('configure/plugins/nvim-cmp')" },
     load_after = {
       ["vim-vsnip"] = true
@@ -425,7 +419,7 @@ _G.packer_plugins = {
     url = "https://github.com/kosayoda/nvim-lightbulb"
   },
   ["nvim-lsp-installer"] = {
-    after = { "nvim-lightbulb", "lspsaga.nvim", "fidget.nvim" },
+    after = { "fidget.nvim", "nvim-lightbulb", "lspsaga.nvim" },
     config = { "require('configure/plugins/nvim-lsp-installer')" },
     load_after = {
       ["aerial.nvim"] = true,
@@ -473,7 +467,6 @@ _G.packer_plugins = {
     url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-scrollbar"] = {
-    after = { "catppuccin" },
     config = { "require('configure/plugins/nvim-scrollbar')" },
     load_after = {},
     loaded = true,
@@ -530,7 +523,7 @@ _G.packer_plugins = {
     url = "https://github.com/p00f/nvim-ts-rainbow"
   },
   ["nvim-web-devicons"] = {
-    after = { "cmp-nvim-lsp", "aerial.nvim", "lualine.nvim", "nvim-tree.lua", "bufferline.nvim", "telescope.nvim" },
+    after = { "telescope.nvim", "bufferline.nvim", "lualine.nvim", "nvim-tree.lua", "cmp-nvim-lsp", "aerial.nvim" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
@@ -556,7 +549,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ripgrep = {
-    after = { "nvim-spectre", "telescope.nvim" },
+    after = { "telescope.nvim", "nvim-spectre" },
     load_after = {},
     loaded = false,
     needs_bufread = false,
@@ -803,79 +796,74 @@ vim.cmd [[ packadd code_runner.nvim ]]
 -- Config for: code_runner.nvim
 require('configure/plugins/code_runner')
 
+vim.cmd [[ packadd vim-dadbod ]]
 vim.cmd [[ packadd lspkind-nvim ]]
 
 -- Config for: lspkind-nvim
 require('configure/plugins/lspkind-nvim')
 
+vim.cmd [[ packadd nvim-web-devicons ]]
 vim.cmd [[ packadd nvim-scrollbar ]]
 
 -- Config for: nvim-scrollbar
 require('configure/plugins/nvim-scrollbar')
-
-vim.cmd [[ packadd catppuccin ]]
-
--- Config for: catppuccin
-require('configure/plugins/catppuccin')
-
-vim.cmd [[ packadd vim-dadbod ]]
-vim.cmd [[ packadd persisted.nvim ]]
-
--- Config for: persisted.nvim
-require('configure/plugins/persisted')
 
 vim.cmd [[ packadd lsp_signature.nvim ]]
 
 -- Config for: lsp_signature.nvim
 require('configure/plugins/lsp_signature')
 
+vim.cmd [[ packadd persisted.nvim ]]
+
+-- Config for: persisted.nvim
+require('configure/plugins/persisted')
+
 vim.cmd [[ packadd nvim-notify ]]
 
 -- Config for: nvim-notify
 require('configure/plugins/nvim-notify')
 
-vim.cmd [[ packadd nvim-web-devicons ]]
 time([[Sequenced loading]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file StartupTime lua require("packer.load")({'vim-startuptime'}, { cmd = "StartupTime", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file NvimTreeToggle lua require("packer.load")({'nvim-tree.lua'}, { cmd = "NvimTreeToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file HopChar1 lua require("packer.load")({'hop.nvim'}, { cmd = "HopChar1", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Translate lua require("packer.load")({'translate.nvim'}, { cmd = "Translate", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file HopWord lua require("packer.load")({'hop.nvim'}, { cmd = "HopWord", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Bdelete lua require("packer.load")({'bufdelete.nvim'}, { cmd = "Bdelete", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Neoformat lua require("packer.load")({'neoformat'}, { cmd = "Neoformat", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DBUIToggle lua require("packer.load")({'vim-dadbod-ui'}, { cmd = "DBUIToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Switch lua require("packer.load")({'switch.vim'}, { cmd = "Switch", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file HopChar1 lua require("packer.load")({'hop.nvim'}, { cmd = "HopChar1", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file HopLine lua require("packer.load")({'hop.nvim'}, { cmd = "HopLine", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file CarbonNowSh lua require("packer.load")({'vim-carbon-now-sh'}, { cmd = "CarbonNowSh", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file NvimTreeFindFile lua require("packer.load")({'nvim-tree.lua'}, { cmd = "NvimTreeFindFile", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file StartupTime lua require("packer.load")({'vim-startuptime'}, { cmd = "StartupTime", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Bdelete lua require("packer.load")({'bufdelete.nvim'}, { cmd = "Bdelete", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file HopWord lua require("packer.load")({'hop.nvim'}, { cmd = "HopWord", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Neoformat lua require("packer.load")({'neoformat'}, { cmd = "Neoformat", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file NvimTreeToggle lua require("packer.load")({'nvim-tree.lua'}, { cmd = "NvimTreeToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file HopLine lua require("packer.load")({'hop.nvim'}, { cmd = "HopLine", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType javascript ++once lua require("packer.load")({'emmet-vim'}, { ft = "javascript" }, _G.packer_plugins)]]
+vim.cmd [[au FileType typescript ++once lua require("packer.load")({'emmet-vim'}, { ft = "typescript" }, _G.packer_plugins)]]
+vim.cmd [[au FileType vue ++once lua require("packer.load")({'emmet-vim'}, { ft = "vue" }, _G.packer_plugins)]]
+vim.cmd [[au FileType xml ++once lua require("packer.load")({'emmet-vim'}, { ft = "xml" }, _G.packer_plugins)]]
+vim.cmd [[au FileType jsx ++once lua require("packer.load")({'emmet-vim'}, { ft = "jsx" }, _G.packer_plugins)]]
+vim.cmd [[au FileType python ++once lua require("packer.load")({'vim-python-pep8-indent'}, { ft = "python" }, _G.packer_plugins)]]
 vim.cmd [[au FileType markdown ++once lua require("packer.load")({'nvim-markdown-preview'}, { ft = "markdown" }, _G.packer_plugins)]]
 vim.cmd [[au FileType html ++once lua require("packer.load")({'emmet-vim'}, { ft = "html" }, _G.packer_plugins)]]
-vim.cmd [[au FileType typescript ++once lua require("packer.load")({'emmet-vim'}, { ft = "typescript" }, _G.packer_plugins)]]
-vim.cmd [[au FileType jsx ++once lua require("packer.load")({'emmet-vim'}, { ft = "jsx" }, _G.packer_plugins)]]
-vim.cmd [[au FileType xml ++once lua require("packer.load")({'emmet-vim'}, { ft = "xml" }, _G.packer_plugins)]]
-vim.cmd [[au FileType vue ++once lua require("packer.load")({'emmet-vim'}, { ft = "vue" }, _G.packer_plugins)]]
-vim.cmd [[au FileType javascript ++once lua require("packer.load")({'emmet-vim'}, { ft = "javascript" }, _G.packer_plugins)]]
-vim.cmd [[au FileType python ++once lua require("packer.load")({'vim-python-pep8-indent'}, { ft = "python" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufNewFile * ++once lua require("packer.load")({'surround.nvim', 'nvim-treesitter', 'nvim-lastplace', 'nvim-ts-context-commentstring', 'undotree', 'nvim-lspconfig', 'nvim-ts-rainbow', 'spellsitter.nvim', 'indent-blankline.nvim', 'vim-illuminate', 'fd', 'which-key.nvim', 'ripgrep', 'vimcdoc', 'vim-visual-multi', 'todo-comments.nvim'}, { event = "BufNewFile *" }, _G.packer_plugins)]]
+vim.cmd [[au BufNewFile * ++once lua require("packer.load")({'surround.nvim', 'todo-comments.nvim', 'vim-illuminate', 'nvim-lastplace', 'fd', 'ripgrep', 'nvim-ts-rainbow', 'nvim-treesitter', 'vim-visual-multi', 'nvim-lspconfig', 'nvim-ts-context-commentstring', 'undotree', 'indent-blankline.nvim', 'vimcdoc', 'spellsitter.nvim', 'which-key.nvim'}, { event = "BufNewFile *" }, _G.packer_plugins)]]
+vim.cmd [[au BufEnter * ++once lua require("packer.load")({'bufferline.nvim'}, { event = "BufEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au BufReadPre * ++once lua require("packer.load")({'nvim-colorizer.lua'}, { event = "BufReadPre *" }, _G.packer_plugins)]]
 vim.cmd [[au CmdlineEnter * ++once lua require("packer.load")({'friendly-snippets'}, { event = "CmdlineEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'surround.nvim', 'nvim-treesitter', 'nvim-lastplace', 'nvim-ts-context-commentstring', 'undotree', 'nvim-lspconfig', 'nvim-ts-rainbow', 'spellsitter.nvim', 'indent-blankline.nvim', 'vim-illuminate', 'fd', 'which-key.nvim', 'ripgrep', 'vimcdoc', 'vim-visual-multi', 'todo-comments.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
 vim.cmd [[au TextChangedI * ++once lua require("packer.load")({'AutoSave.nvim'}, { event = "TextChangedI *" }, _G.packer_plugins)]]
 vim.cmd [[au TextChanged * ++once lua require("packer.load")({'AutoSave.nvim'}, { event = "TextChanged *" }, _G.packer_plugins)]]
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'friendly-snippets', 'nvim-autopairs'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufEnter * ++once lua require("packer.load")({'bufferline.nvim'}, { event = "BufEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'surround.nvim', 'todo-comments.nvim', 'vim-illuminate', 'nvim-lastplace', 'fd', 'ripgrep', 'nvim-ts-rainbow', 'nvim-treesitter', 'vim-visual-multi', 'nvim-lspconfig', 'nvim-ts-context-commentstring', 'undotree', 'indent-blankline.nvim', 'vimcdoc', 'spellsitter.nvim', 'which-key.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end

@@ -79,12 +79,12 @@ local packer_install_plugins = {
     -------------
     --- theme ---
     -------------
-    ["catppuccin/nvim"] = {
-        as = "catppuccin",
-        load_file = true,
-        disable = false,
-        after = {"nvim-scrollbar"}
-    },
+    --["catppuccin/nvim"] = {
+    --    as = "catppuccin",
+    --    load_file = true,
+    --    disable = false,
+    --    after = {"nvim-scrollbar"}
+    --},
     ["Mofiqul/vscode.nvim"] = {
         load_file = true,
         disable = true,
