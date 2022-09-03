@@ -107,11 +107,6 @@ mapping.global = {
         {{"n"}, "<leader>ss", "<cmd>SessionSave<cr>", "noremap"},
         {{"n"}, "<leader>sd", "<cmd>SessionDelete<cr>", "noremap"}
     },
-    nvim_spectre = {
-        {{"n"}, "<leader>rp", "<cmd>lua require('spectre').open()<cr>", "noremap|silent"},
-        {{"n"}, "<leader>rf", "viw:lua require('spectre').open_file_search()<cr>", "noremap|silent"},
-        {{"n"}, "<leader>rw", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "noremap|silent"}
-    },
     toggleterm = {
         {{"n"}, "<leader>tt", "<cmd>lua require('toggleterm').term_toggle()<cr>", "noremap|silent"},
         {{"n"}, "<leader>tf", "<cmd>lua require('toggleterm').float_toggle()<cr>", "noremap|silent"},
@@ -189,24 +184,6 @@ mapping.global = {
         {{"n"}, "<F8>", "<cmd>lua require'dap'.step_out()<cr>", "noremap|silent"},
         {{"n"}, "<F9>", "<cmd>lua require'dap'.run_last()<cr>", "noremap|silent"},
         {{"n"}, "<F10>", "<cmd>lua require'dap'.terminate()<cr>", "noremap|silent"}
-    },
-    nvim_hlslens = {
-        {
-            {"n"},
-            "n",
-            "<cmd>execute('normal! ' . v:count1 . 'n')<cr><cmd>lua require('hlslens').start()<cr>",
-            "noremap|silent"
-        },
-        {
-            {"n"},
-            "N",
-            "<cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>",
-            "noremap|silent"
-        },
-        {{"n"}, "*", "*<cmd>lua require('hlslens').start()<CR>", "noremap|silent"},
-        {{"n"}, "#", "#<cmd>lua require('hlslens').start()<cr>", "noremap|silent"},
-        {{"n"}, "g*", "g*<cmd>lua require('hlslens').start()<cr>", "noremap|silent"},
-        {{"n"}, "g#", "g#<cmd>lua require('hlslens').start()<cr>", "noremap|silent"}
     },
     vim_carbon_now_sh = {
         {{"v"}, "<leader>ch", ":CarbonNowSh<cr>", "noremap|silent"},

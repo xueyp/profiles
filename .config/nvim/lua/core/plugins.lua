@@ -339,22 +339,10 @@ local packer_install_plugins = {
     -------------
     -- function -
     -------------
-    ["Pocco81/AutoSave.nvim"] = {
-        load_file = true,
-        disable = false,
-        event = {"TextChanged", "TextChangedI"},
-        after = {"impatient.nvim"}
-    },
     ["ethanholz/nvim-lastplace"] = {
         load_file = true,
         disable = false,
         event = {"BufRead", "BufNewFile"},
-        after = {"impatient.nvim"}
-    },
-    ["kevinhwang91/nvim-hlslens"] = {
-        load_file = true,
-        disable = false,
-        module = "hlslens",
         after = {"impatient.nvim"}
     },
     ["phaazon/hop.nvim"] = {
@@ -372,11 +360,6 @@ local packer_install_plugins = {
         load_file = true,
         disable = false,
         after = {"telescope.nvim"}
-    },
-    ["nvim-pack/nvim-spectre"] = {
-        load_file = true,
-        module = "spectre",
-        after = {"ripgrep", "plenary.nvim"}
     },
     ["akinsho/bufferline.nvim"] = {
         load_file = true,
