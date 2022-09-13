@@ -121,6 +121,26 @@ return packer.startup(function(use)
   use { "williamboman/mason.nvim" }
   -- quickrun
   use { "thinca/vim-quickrun" }
+  -- neoformat
+  use { "sbdchd/neoformat" }
+  -- telescope
+  use {
+  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+-- or                            , branch = '0.1.x',
+  requires = { {'nvim-lua/plenary.nvim'} }
+}
+-- markdown_preview
+-- install without yarn or npm
+--use({
+--    "iamcco/markdown-preview.nvim",
+--    run = function() vim.fn["mkdp#util#install"]() end,
+--})
+
+use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
+
+
+
 
 
   -- Automatically set up your configuration after cloning packer.nvim

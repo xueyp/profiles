@@ -57,7 +57,6 @@ map('n', '<leader>q', ':qa!<CR>')
 -- Terminal mappings
 map('n', '<C-t>', ':Term<CR>', { noremap = true })  -- open
 map('t', '<Esc>', '<C-\\><C-n>')                    -- exit
-
 -- NvimTree
 map('n', '<C-n>', ':NvimTreeToggle<CR>')            -- open/close
 map('n', '<leader>f', ':NvimTreeRefresh<CR>')       -- refresh
@@ -65,5 +64,25 @@ map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
 
 -- Tagbar
 map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
--- yabs
-map('n', '<leader>rr', ':QuickRun<CR>',{noremap = true,silent = true})          -- open/close
+-- quickrun
+map('n', '<leader>rr', ':QuickRun<CR>',{noremap = true,silent = true})          -- open/Close
+-- dap
+map('n','<leader>db',"<cmd>lua require'dap'.toggle_breakpoint()<CR>")
+map('n','<leader>dB',"<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<CR>")
+map('n','<leader>dc',"<cmd>lua require'dap'.clear_breakpoints()<CR>")
+map('n','<leader>du',"<cmd>lua require'dapui'.toggle()<CR>")
+map('n','<leader>dh',"<cmd>lua require'dapui'.eval()<CR>")
+map('n','<F5>',"<cmd>lua require'dap'.continue()<CR>")
+map('n','<F6>',"<cmd>lua require'dap'.step_into()<CR>")
+map('n','<F7>',"<cmd>lua require'dap'.step_over()<CR>")
+map('n','<F8>',"<cmd>lua require'dap'.step_out()<CR>")
+map('n','<F9>',"<cmd>lua require'dap'.run_last()<CR>")
+map('n','<F10>',"<cmd>lua require'dap'.terminate()<CR>")
+-- neoformat
+map('n','<leader>cf','<cmd>Neoformat<CR>')
+-- markdown preview
+map('n','<leader>mps','<cmd>MarkdownPreview<CR>')
+map('n','<leader>mpe','<cmd>MarkdownPreviewStop<CR>')
+map('n','<leader>mpt','<cmd>MarkdownPreviewToggle<CR>')
+
+

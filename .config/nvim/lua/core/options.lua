@@ -50,6 +50,10 @@ opt.synmaxcol = 240         -- Max column for syntax highlight
 opt.updatetime = 700        -- ms to wait for trigger an event
 
 -----------------------------------------------------------
+-- plugins
+-----------------------------------------------------------
+g.mkdp_path_to_chrome = "/usr/bin/google-chrome-stable"
+-----------------------------------------------------------
 -- Startup
 -----------------------------------------------------------
 -- Disable nvim intro
