@@ -119,8 +119,8 @@ return packer.startup(function(use)
 
   -- mason
   use { "williamboman/mason.nvim" }
-  -- quickrun
-  use { "thinca/vim-quickrun" }
+  -- asyncrun
+  use { "skywind3000/asyncrun.vim" }
   -- neoformat
   use { "sbdchd/neoformat" }
   -- telescope

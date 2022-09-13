@@ -53,6 +53,8 @@ opt.updatetime = 700        -- ms to wait for trigger an event
 -- plugins
 -----------------------------------------------------------
 g.mkdp_path_to_chrome = "/usr/bin/google-chrome-stable"
+-- QuickRun
+vim.cmd 'source ~/.config/nvim/plugin/compileandrun.vim'
 -----------------------------------------------------------
 -- Startup
 -----------------------------------------------------------
@@ -91,3 +93,4 @@ local disabled_built_ins = {
 for _, plugin in pairs(disabled_built_ins) do
    g["loaded_" .. plugin] = 1
 end
+

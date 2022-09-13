@@ -65,7 +65,7 @@ map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
 -- Tagbar
 map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
 -- quickrun
-map('n', '<leader>rr', ':QuickRun<CR>',{noremap = true,silent = true})          -- open/Close
+--map('n', '<leader>rr', ':QuickRun<CR>',{noremap = true,silent = true})          -- open/Close
 -- dap
 map('n','<leader>db',"<cmd>lua require'dap'.toggle_breakpoint()<CR>")
 map('n','<leader>dB',"<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<CR>")
