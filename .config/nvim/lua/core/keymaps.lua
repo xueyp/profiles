@@ -84,5 +84,9 @@ map('n','<leader>cf','<cmd>Neoformat<CR>')
 map('n','<leader>mps','<cmd>MarkdownPreview<CR>')
 map('n','<leader>mpe','<cmd>MarkdownPreviewStop<CR>')
 map('n','<leader>mpt','<cmd>MarkdownPreviewToggle<CR>')
-
+-- markdown preview
+map('n','<leader>ff','<cmd>Telescope find_files<CR>')
+map('n','<leader>fg','<cmd>Telescope live_grep<CR>')
+map('n','<leader>fb','<cmd>Telescope buffers<CR>')
+map('n','<leader>fh','<cmd>Telescope help_tags<CR>')
 
