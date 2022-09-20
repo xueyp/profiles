@@ -52,9 +52,9 @@ opt.updatetime = 700        -- ms to wait for trigger an event
 -----------------------------------------------------------
 -- plugins
 -----------------------------------------------------------
-g.mkdp_path_to_chrome = "/usr/bin/google-chrome-stable"
+g.mkdp_path_to_chrome = "google-chrome-stable"
 -- QuickRun
-vim.cmd 'source ~/.config/nvim/plugin/compileandrun.vim'
+vim.cmd 'source $XDG_CONFIG_HOME/nvim/plugin/compileandrun.vim'
 -----------------------------------------------------------
 -- Startup
 -----------------------------------------------------------

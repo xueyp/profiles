@@ -37,12 +37,14 @@ alias starthive="$HIVE_HOME/bin/hiveserver2& &&$HIVE_HOME/bin/beeline -u jdbc:hi
 alias zvpn="cd /home/x/.vpn && sudo openvpn --config /home/x/.vpn/base.ovpn"
 
 alias sparksh="spark-shell --master spark://localhost:7077 --num-executors 3 --driver-memory 1g --executor-memory 1g --executor-cores 1"
-export PYSPARK_DRIVER_PYTHON=jupyter 
+export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 alias pysparksh="pyspark --master spark://localhost:7077 --num-executors 3 --driver-memory 1g --executor-memory 1g --executor-cores 1"
 
 alias startopenvas="sudo systemctl restart redis && sudo systemctl restart openvas-scanner && sudo openvasmd -p 9390 -a 127.0.0.1 && sudo gsad -f --listen=127.0.0.1 --mlisten=127.0.0.1 --mport=9390"
 
+# neovim xdg_config_home
+export XDG_CONFIG_HOME=~/.config
 export FABRIC_PATH=/usr/local/fabric-samples
 export FABRIC_CFG_PATH=$FABRIC_PATH/config/
 export GO111MODULE=on
