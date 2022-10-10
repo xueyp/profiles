@@ -65,12 +65,44 @@ return packer.startup(function(use)
   -- Tag viewer
   use 'preservim/tagbar'
 
+ --markdown_preview
+ --install without yarn or npm
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
+ -- Statusline
+  use {
+    'feline-nvim/feline.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+  }
+
+  -- Dashboard (start screen)
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+  }
+
+
+ if vim.fn.has("Linux") == 1 then
   -- Treesitter interface
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
 
+  -- nvmi-dap-ui
+  use {'theHamsta/nvim-dap-virtual-text'}
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use { "mfussenegger/nvim-dap" }
+
+  -- mason
+  use { "williamboman/mason.nvim" }
+  -- asyncrun
+  use { "skywind3000/asyncrun.vim" }
+  -- neoformat
+  use { "sbdchd/neoformat" }
   -- Color schemes
   use 'navarasu/onedark.nvim'
   use 'tanvirtin/monokai.nvim'
@@ -90,13 +122,6 @@ return packer.startup(function(use)
       'saadparwaiz1/cmp_luasnip',
     },
   }
-
-  -- Statusline
-  use {
-    'feline-nvim/feline.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
-  }
-
   -- git labels
   use {
     'lewis6991/gitsigns.nvim',
@@ -105,44 +130,19 @@ return packer.startup(function(use)
       require('gitsigns').setup{}
     end
   }
-
-  -- Dashboard (start screen)
-  use {
-    'goolord/alpha-nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
-  }
-
-  -- nvmi-dap-ui
-  use {'theHamsta/nvim-dap-virtual-text'}
-  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-  use { "mfussenegger/nvim-dap" }
-
-  -- mason
-  use { "williamboman/mason.nvim" }
-  -- asyncrun
-  use { "skywind3000/asyncrun.vim" }
-  -- neoformat
-  use { "sbdchd/neoformat" }
-  -- xkb-switch
-  if vim.fn.has("win32") == 1 then use { "lyokha/vim-xkbswitch" }
-  end
   -- telescope
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
- --markdown_preview
- --install without yarn or npm
-  use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-  })
+
+end--  end of if vim.fn.has("Linux")
 
 
 
-
-
-
+  -- xkb-switch
+  if vim.fn.has("win32") == 1 then use { "lyokha/vim-xkbswitch" }
+  end
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
@@ -150,3 +150,4 @@ return packer.startup(function(use)
     require('packer').sync()
   end
 end)
+
