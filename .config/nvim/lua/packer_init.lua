@@ -123,6 +123,9 @@ return packer.startup(function(use)
   use { "skywind3000/asyncrun.vim" }
   -- neoformat
   use { "sbdchd/neoformat" }
+  -- xkb-switch
+  if vim.fn.has("win32") == 1 then use { "lyokha/vim-xkbswitch" }
+  end
   -- telescope
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
