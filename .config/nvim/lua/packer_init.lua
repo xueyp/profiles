@@ -41,7 +41,15 @@ if not status_ok then
 end
 
 -- Install plugins
-return packer.startup(function(use)
+return packer.startup({
+config = {
+    max_jobs = 16,
+    git = {
+      --default_url_format = 'https://hub.nuaa.cf/%s'
+      default_url_format = 'https://github.com/%s'
+    }
+  },
+function(use)
   -- Add you plugins here:
   use 'wbthomason/packer.nvim' -- packer can manage itself
 
@@ -149,5 +157,6 @@ end--  end of if vim.fn.has("Linux")
   if packer_bootstrap then
     require('packer').sync()
   end
-end)
+end
+})
 
