@@ -45,9 +45,14 @@ return packer.startup({
 config = {
     max_jobs = 16,
     git = {
-      --default_url_format = 'https://hub.nuaa.cf/%s'
+	    --default_url_format = 'git@github.com:%s'
+	    --default_url_format = 'https://hub.nuaa.cf/%s'
       default_url_format = 'https://github.com/%s'
-    }
+	    --default_url_format = 'https://ghproxy.com/https://github.com/%s'
+      --default_url_format = "https://hub.fastgit.xyz/%s",
+      --default_url_format = "https://gitcode.net/mirrors/%s",
+      --default_url_format = "https://gitclone.com/github.com/%s",
+    },
   },
 function(use)
   -- Add you plugins here:
@@ -90,6 +95,10 @@ function(use)
   use {
     'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
+  }
+  -- auto-session
+  use {
+  'rmagatti/auto-session',
   }
 
 
