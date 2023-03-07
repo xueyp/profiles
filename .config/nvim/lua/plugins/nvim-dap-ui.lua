@@ -17,7 +17,7 @@ end
 
 dap.adapters.python = {
         type = "executable",
-        command = '/home/x/venvs/quant/bin/python3',
+        command = '/home/x/venvs/DataAnalytics/bin/python3',
         args = {"-m", "debugpy.adapter"}
     }
 dap.configurations.python =  {
