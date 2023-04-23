@@ -26,6 +26,9 @@ map('', '<right>', '<nop>')
 -- Map Esc to kk
 map('i', 'kk', '<Esc>')
 
+-- buffers jump
+map('n','<leader>b',':buffers<CR>:buffer<Space>')
+
 -- Clear search highlighting with <leader> and c
 map('n', '<leader>c', ':nohl<CR>')
 
