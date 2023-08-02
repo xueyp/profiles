@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/home/x/.local/share/nvim/site/pack/packer/start/asyncrun.vim",
     url = "https://github.com/skywind3000/asyncrun.vim"
   },
-  ["auto-session"] = {
-    loaded = true,
-    path = "/home/x/.local/share/nvim/site/pack/packer/start/auto-session",
-    url = "https://github.com/rmagatti/auto-session"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/x/.local/share/nvim/site/pack/packer/start/cmp-buffer",

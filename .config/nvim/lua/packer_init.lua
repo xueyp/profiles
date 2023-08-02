@@ -97,9 +97,9 @@ function(use)
     requires = { 'kyazdani42/nvim-web-devicons' },
   }
   -- auto-session
-  use {
-  'rmagatti/auto-session',
-  }
+ -- use {
+ -- 'rmagatti/auto-session',
+ -- }
 
 
  if vim.fn.has("Linux") == 1 or vim.fn.has("wsl") then
