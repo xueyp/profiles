@@ -106,7 +106,7 @@ function(use)
   -- Treesitter interface
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    run = ':TSUpdate'
   }
 
   -- nvmi-dap-ui

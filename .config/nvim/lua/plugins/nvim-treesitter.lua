@@ -19,9 +19,13 @@ nvim_treesitter.setup {
     'rust', 'typescript', 'vim', 'yaml','r','go',
   },
   -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
+  sync_install = true,
+  auto_install = true,
   highlight = {
     -- `false` will disable the whole extension
     enable = true,
   },
+  indent = {
+    enable = true
+  }
 }
