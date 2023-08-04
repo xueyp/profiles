@@ -102,7 +102,7 @@ function(use)
  -- }
 
 
- if vim.fn.has("Linux") == 1 or vim.fn.has("wsl") then
+ if vim.fn.has("linux") == 1 or vim.fn.has("wsl") == 1 then
   -- Treesitter interface
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -153,7 +153,7 @@ function(use)
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 
-end--  end of if vim.fn.has("Linux")
+end--  end of if vim.fn.has("linux")
 
 
 
