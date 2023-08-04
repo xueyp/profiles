@@ -1,3 +1,6 @@
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
 -----------------------------------------------------------
 -- Define keymaps of Neovim and installed plugins.
 -----------------------------------------------------------
@@ -92,4 +95,5 @@ map('n','<leader>ff','<cmd>Telescope find_files<CR>')
 map('n','<leader>fg','<cmd>Telescope live_grep<CR>')
 map('n','<leader>fb','<cmd>Telescope buffers<CR>')
 map('n','<leader>fh','<cmd>Telescope help_tags<CR>')
+
 
