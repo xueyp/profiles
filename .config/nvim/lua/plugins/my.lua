@@ -20,12 +20,10 @@ return {
 
   --if vim.fn.has("linux") == 1 or vim.fn.has("wsl") == 1 then
 
-  -- mason
-  { "williamboman/mason.nvim" },
   -- asyncbuild
   { "skywind3000/asyncrun.vim" },
   -- neoformat
-  { "sbdchd/neoformat" },
+  --{ "sbdchd/neoformat" },
   -- Color schemes
   { 'navarasu/onedark.nvim' },
   { 'tanvirtin/monokai.nvim' },

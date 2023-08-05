@@ -54,13 +54,6 @@ return {
       -- LSP Server Settings
       ---@type lspconfig.options
       servers = {
-        bashls = {},
-        pyright = {},
-        clangd = {},
-        html = {},
-        gopls = {},
-        jdtls = {},
-        jsonls = {},
         lua_ls = {
           -- mason = false, -- set to false if you don't want this server to be installed with mason
           -- Use this to add any additional keymaps
@@ -84,11 +77,6 @@ return {
       ---@type table<string, fun(server:string, opts:_.lspconfig.options):boolean?>
       setup = {
         -- example to setup with typescript.nvim
-        require 'lspconfig'.pyright.setup {},
-        require 'lspconfig'.clangd.setup {},
-        require 'lspconfig'.gopls.setup {},
-        require 'lspconfig'.jdtls.setup {},
-        require 'lspconfig'.jsonls.setup {},
         require 'lspconfig'.lua_ls.setup {},
         -- tsserver = function(_, opts)
         --   require("typescript").setup({ server = opts })
@@ -189,7 +177,7 @@ return {
         all_mslp_servers = vim.tbl_keys(require("mason-lspconfig.mappings.server").lspconfig_to_package)
       end
 
-      local ensure_installed = {} ---@type string[]
+      local ensure_installed = { 'bashls', 'clangd', 'gopls', 'pyright', 'jsonls', 'jdtls', 'lua_ls' } ---@type string[]
       for server, server_opts in pairs(servers) do
         if server_opts then
           server_opts = server_opts == true and {} or server_opts
