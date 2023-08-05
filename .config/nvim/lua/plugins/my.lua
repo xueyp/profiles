@@ -36,6 +36,15 @@ return {
     -- or                              , branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
+  {
+    "folke/noice.nvim",
+    -- add any options here
+    --opts = {
+    --  cmdline = {
+    --    view = "cmdline",
+    --  },
+    --},
+  },
 
   --end--  end of if vim.fn.has("linux")
 

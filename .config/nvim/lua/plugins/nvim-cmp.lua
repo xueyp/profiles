@@ -2,15 +2,6 @@ return{
   -- Autocomplete
 {
   "hrsh7th/nvim-cmp",
-  version = false, -- last release is way too old
-  event = "InsertEnter",
-  dependencies = {
-    'L3MON4D3/LuaSnip',
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-    "saadparwaiz1/cmp_luasnip",
-  },
   opts = function()
     vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
     local cmp = require("cmp")
