@@ -1,3 +1,4 @@
+if vim.fn.has("linux") == 1 or vim.fn.has("wsl") == 1 then
 return {
   {
   "nvim-neotest/neotest",
@@ -33,3 +34,5 @@ return {
   },
 },
 }
+else return {}
+end

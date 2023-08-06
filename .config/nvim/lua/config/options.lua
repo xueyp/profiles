@@ -23,9 +23,9 @@ g.mkdp_path_to_chrome = "google-chrome-stable"
 vim.cmd 'source $XDG_CONFIG_HOME/nvim/plugin/compileandrun.vim'
 -- xkb-switch
 if vim.fn.has("win32") == 1
-	then if vim.fn.has("gui_running") == 1
+	--then if vim.fn.has("gui_running") == 1
 		then vim.cmd 'source $XDG_CONFIG_HOME/nvim/plugin/xkb-switch.vim'
-		end
+	--	end
 end
 
 
