@@ -21,8 +21,8 @@ if vim.fn.has("win32") == 1 then
   { "theHamsta/nvim-dap-virtual-text", enabled = false },
   { "jay-babu/mason-nvim-dap", enabled = false },
   { "jbyuki/one-small-step-for-vimkind", enabled = false },
-
-
+  { "nvim-treesitter/nvim-treesitter", enabled = false },
+  { "RRethy/vim-illuminate", enabled = false },
   } --end return
 else
   return {}
