@@ -3,7 +3,7 @@ return {
   keys = {
     {
       "<leader>cf",
-      Neoformat,
+      "<cmd>Neoformat<cr><esc>",
       desc = "Neoformat",
     },
 }}

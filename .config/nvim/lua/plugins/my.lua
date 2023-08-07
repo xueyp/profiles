@@ -19,16 +19,6 @@ return {
   },
   -- Color schemes
   { 'navarasu/onedark.nvim' },
-  { 'tanvirtin/monokai.nvim' },
-  { 'rose-pine/neovim',      name = 'rose-pine' },
-  {
-    "folke/noice.nvim",
-    -- add any options here
-    --opts = {
-    --  cmdline = {
-    --    view = "cmdline",
-    --  },
-    --},
-  },
+
 
 }
