@@ -30,5 +30,6 @@ map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
 map('n','<leader>mps','<cmd>MarkdownPreview<CR>')
 map('n','<leader>mpe','<cmd>MarkdownPreviewStop<CR>')
 map('n','<leader>mpt','<cmd>MarkdownPreviewToggle<CR>')
-
+-- buffers jump
+map('n','<leader>B',':buffers<CR>:buffer<Space>')
 
