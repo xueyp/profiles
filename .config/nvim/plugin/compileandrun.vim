@@ -1,4 +1,4 @@
-nnoremap <leader>rr :call <SID>compile_and_run()<CR>
+nnoremap <leader>rr :call <SID>compile_and_run()<CR><cmd>copen<cr>
 
 function! s:compile_and_run()
     exec 'w'
