@@ -1,8 +1,4 @@
 return {
-  {
-    -- Autopair
-    'windwp/nvim-autopairs',
-  },
   --{
   -- Icons
   --  'kyazdani42/nvim-web-devicons',
@@ -18,7 +14,7 @@ return {
     build = "call mkdp#util#install() ",
   },
   -- Color schemes
-  { 'navarasu/onedark.nvim' },
+  --{ 'navarasu/onedark.nvim' },
 
 
 }
