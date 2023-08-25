@@ -1,7 +1,7 @@
 if vim.fn.has("win32") == 1 then
   return {
-    { "lyokha/vim-xkbswitch" }, 
-    
+    { "lyokha/vim-xkbswitch" },
+
       -- disabled plugins
   { "akinsho/bufferline.nvim", enabled = false },
   { "L3MON4D3/LuaSnip", enabled = false },
@@ -12,7 +12,7 @@ if vim.fn.has("win32") == 1 then
   { "hrsh7th/cmp-path", enabled = false },
   { "saadparwaiz1/cmp_luasnip", enabled = false },
   { "neovim/nvim-lspconfig", enabled = false },
-  { "folke/neoconf.nvim", enabled = false },          
+  { "folke/neoconf.nvim", enabled = false },
   { "williamboman/mason-lspconfig.nvim", enabled = false },
   { "jose-elias-alvarez/null-ls.nvim", enabled = false },
   { "williamboman/mason.nvim", enabled = false },
