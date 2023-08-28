@@ -70,32 +70,34 @@ autocmd('BufLeave', {
   command = 'stopinsert'
 })
 
+function AsyncRunFile(event)
+  if vim.bo[event.buf].filetype == 'python' then
+    return "AsyncRun! time /home/x/venvs/DataAnalytics/bin/python3 %"
+  end
+  if vim.bo[event.buf].filetype == 'c' then
+    return "AsyncRun! gcc % -o %<; time ./%<"
+  end
+  if vim.bo[event.buf].filetype == 'cpp' then
+    return "AsyncRun! g++ -std=c++11 % -o %<; time ./%<"
+  end
+  if vim.bo[event.buf].filetype == 'java' then
+    return "AsyncRun! javac %; time java %<"
+  end
+  if vim.bo[event.buf].filetype == 'sh' then
+    return "AsyncRun! time bash %"
+  end
+  if vim.bo[event.buf].filetype == 'R' then
+    return "AsyncRun! time Rscript %"
+  end
+  if vim.bo[event.buf].filetype == 'go' then
+    return "AsyncRun! time go run %"
+  end
+end
+
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "python","c","cpp","sh","R","go","java" },
+  pattern = { "python", "c", "cpp", "sh", "R", "go", "java" },
   callback = function(event)
-    local runcmd = ''
-    if vim.bo[event.buf].filetype == 'python' then
-      runcmd = "AsyncRun! time /home/x/venvs/DataAnalytics/bin/python3 %"
-    end
-    if vim.bo[event.buf].filetype == 'c' then
-      runcmd = "AsyncRun! gcc % -o %<; time ./%<"
-    end
-    if vim.bo[event.buf].filetype == 'cpp' then
-      runcmd = "AsyncRun! g++ -std=c++11 % -o %<; time ./%<"
-    end
-    if vim.bo[event.buf].filetype == 'java' then
-      runcmd = "AsyncRun! javac %; time java %<"
-    end
-    if vim.bo[event.buf].filetype == 'sh' then
-      runcmd = "AsyncRun! time bash %"
-    end
-    if vim.bo[event.buf].filetype == 'R' then
-      runcmd = "AsyncRun! time Rscript %"
-    end
-    if vim.bo[event.buf].filetype == 'go' then
-      runcmd = "AsyncRun! time go run %"
-    end
-    vim.keymap.set('n', '<leader>rr', "<cmd>w|" .. runcmd .. "<cr><cmd>copen<cr>",
+    vim.keymap.set('n', '<leader>rr', "<cmd>w|" .. AsyncRunFile(event) .. "<cr><cmd>copen<cr>",
       { buffer = event.buf })
-  end,
+  end
 })

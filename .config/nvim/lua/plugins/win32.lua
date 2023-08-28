@@ -22,6 +22,7 @@ if vim.fn.has("win32") == 1 then
     { "nvim-treesitter/nvim-treesitter",   enabled = false },
     { "RRethy/vim-illuminate",             enabled = false },
     { "skywind3000/asyncrun.vim",          enabled = false },
+    { "nvim-neotest/neotest",          enabled = false },
   } --end return
 else
   return {}
