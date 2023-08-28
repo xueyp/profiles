@@ -16,6 +16,10 @@ autocmd('BufRead,BufNewFile', {
   pattern = '*.R',
   command = "set filetype=R"
 })
+autocmd('BufRead,BufNewFile', {
+  pattern = '*.jl',
+  command = "set filetype=julia"
+})
 
 -- Remove whitespace on save
 autocmd('BufWritePre', {
@@ -70,9 +74,16 @@ autocmd('BufLeave', {
   command = 'stopinsert'
 })
 
+-- AsyncRun Code File
 function AsyncRunFile(event)
   if vim.bo[event.buf].filetype == 'python' then
     return "AsyncRun! time /home/x/venvs/DataAnalytics/bin/python3 %"
+  end
+  if vim.bo[event.buf].filetype == 'lua' then
+    return "AsyncRun! time lua %"
+  end
+  if vim.bo[event.buf].filetype == 'julia' then
+    return "AsyncRun! time julia %"
   end
   if vim.bo[event.buf].filetype == 'c' then
     return "AsyncRun! gcc % -o %<; time ./%<"
@@ -95,9 +106,9 @@ function AsyncRunFile(event)
 end
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "python", "c", "cpp", "sh", "R", "go", "java" },
+  pattern = { "python", "lua","julia","c", "cpp", "sh", "R", "go", "java" },
   callback = function(event)
     vim.keymap.set('n', '<leader>rr', "<cmd>w|" .. AsyncRunFile(event) .. "<cr><cmd>copen<cr>",
-      { buffer = event.buf })
+      { buffer = event.buf ,desc = "AsyncRunFile"})
   end
 })
