@@ -8,8 +8,14 @@
 -- Define autocommands with Lua APIs
 -- See: h:api-autocmd, h:augroup
 
-local augroup = vim.api.nvim_create_augroup   -- Create/get autocommand group
-local autocmd = vim.api.nvim_create_autocmd   -- Create autocommand
+local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
+local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
+
+-- register Rscript file
+autocmd('BufRead,BufNewFile', {
+  pattern = '*.R',
+  command = "set filetype=R"
+})
 
 -- Remove whitespace on save
 autocmd('BufWritePre', {
@@ -64,3 +70,32 @@ autocmd('BufLeave', {
   command = 'stopinsert'
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "python","c","cpp","sh","R","go","java" },
+  callback = function(event)
+    local runcmd = ''
+    if vim.bo[event.buf].filetype == 'python' then
+      runcmd = "AsyncRun! time /home/x/venvs/DataAnalytics/bin/python3 %"
+    end
+    if vim.bo[event.buf].filetype == 'c' then
+      runcmd = "AsyncRun! gcc % -o %<; time ./%<"
+    end
+    if vim.bo[event.buf].filetype == 'cpp' then
+      runcmd = "AsyncRun! g++ -std=c++11 % -o %<; time ./%<"
+    end
+    if vim.bo[event.buf].filetype == 'java' then
+      runcmd = "AsyncRun! javac %; time java %<"
+    end
+    if vim.bo[event.buf].filetype == 'sh' then
+      runcmd = "AsyncRun! time bash %"
+    end
+    if vim.bo[event.buf].filetype == 'R' then
+      runcmd = "AsyncRun! time Rscript %"
+    end
+    if vim.bo[event.buf].filetype == 'go' then
+      runcmd = "AsyncRun! time go run %"
+    end
+    vim.keymap.set('n', '<leader>rr', "<cmd>w|" .. runcmd .. "<cr><cmd>copen<cr>",
+      { buffer = event.buf })
+  end,
+})

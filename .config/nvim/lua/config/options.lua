@@ -19,9 +19,10 @@ opt.wrap              = true
 -----------------------------------------------------------
 -- plugins
 -----------------------------------------------------------
+-- asyncrun
+g.asyncrun_open = 15
+-- markdownpreview
 g.mkdp_path_to_chrome = "google-chrome-stable"
--- QuickRun
-vim.cmd 'source $XDG_CONFIG_HOME/nvim/plugin/compileandrun.vim'
 -- xkb-switch
 if vim.fn.has("win32") == 1
 --then if vim.fn.has("gui_running") == 1
