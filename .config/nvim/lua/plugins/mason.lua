@@ -1,11 +1,11 @@
-  return {
-    {
+return {
+  {
 
-      "williamboman/mason.nvim",
-      opts = {
-        ensure_installed = {
-          'bash-language-server', 'r-languageserver', 'clangd', 'gopls', 'pyright', 'jdtls',
-          "autopep8",
-        },
-      }
-    } }
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        'bash-language-server', 'r-languageserver', 'clangd', 'gopls', 'pyright', 'jdtls', 'prettier',
+        "autopep8", 'html-lsp', 'css-lsp', 'typescript-language-server',
+      },
+    }
+  } }

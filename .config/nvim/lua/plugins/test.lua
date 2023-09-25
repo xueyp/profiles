@@ -1,4 +1,4 @@
-return {
+return{
   {
   "nvim-neotest/neotest",
   opts = {
@@ -33,3 +33,4 @@ return {
   },
 },
 }
+
