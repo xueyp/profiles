@@ -12,7 +12,7 @@ if vim.fn.has("win32") == 1 then
     { "neovim/nvim-lspconfig",             enabled = false },
     { "folke/neoconf.nvim",                enabled = false },
     { "williamboman/mason-lspconfig.nvim", enabled = false },
-    { "jose-elias-alvarez/null-ls.nvim",   enabled = false },
+    { "vimtools/null-ls.nvim",             enabled = false },
     { "williamboman/mason.nvim",           enabled = false },
     { "mfussenegger/nvim-dap",             enabled = false },
     { "rcarriga/nvim-dap-ui",              enabled = false },
@@ -22,7 +22,7 @@ if vim.fn.has("win32") == 1 then
     { "nvim-treesitter/nvim-treesitter",   enabled = false },
     { "RRethy/vim-illuminate",             enabled = false },
     { "skywind3000/asyncrun.vim",          enabled = false },
-    { "nvim-neotest/neotest",          enabled = false },
+    { "nvim-neotest/neotest",              enabled = false },
   } --end return
 else
   return {}
