@@ -12,11 +12,11 @@ local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
 local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
 -- register Rscript file
-autocmd('BufRead,BufNewFile', {
+autocmd({'BufRead','BufNewFile'}, {
   pattern = '*.R',
   command = "set filetype=R"
 })
-autocmd('BufRead,BufNewFile', {
+autocmd({'BufRead','BufNewFile'}, {
   pattern = '*.jl',
   command = "set filetype=julia"
 })
