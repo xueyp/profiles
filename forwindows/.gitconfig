@@ -1,5 +1,0 @@
-# 放在 C:\Users\用户名  目录下
-[http "https://github.com"]
-	proxy = socks5://127.0.0.1:10808
-[https "https://github.com"]
-	proxy = socks5://127.0.0.1:10808

@@ -1,0 +1,5 @@
+# 放在 ~/ 或 C:\Users\用户名  目录下。对于ssh连接的github地址，需配置 ~/.ssh 或 C:\Users\用户名\.ssh 目录下的config文件
+[http "https://github.com"]
+	proxy = socks5://192.168.12.230:10810
+[https "https://github.com"]
+	proxy = socks5://192.168.12.230:10810
