@@ -1,4 +1,4 @@
-if has("win32")
+if has("win32") || has("win64") || has("win16")
 	let g:XkbSwitchLib = 'C:\Dev\nvim-win64\bin\libxkbswitch64.dll'
 else
 	let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
