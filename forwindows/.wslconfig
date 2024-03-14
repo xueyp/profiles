@@ -1,0 +1,40 @@
+[wsl2]
+# Limits VM memory to use no more than 4 GB, this can be set as whole numbers using GB or MB
+memory=8GB
+
+# Sets the VM to use two virtual processors
+processors=4
+
+# Sets amount of swap storage space to 8GB, default is 25% of available RAM
+swap=4GB
+
+# Sets swapfile path location, default is %USERPROFILE%\AppData\Local\Temp\swap.vhdx
+#swapFile = D:\\Documents\\wsl\\swap.vhdx
+
+# Turn on default connection to bind WSL 2 localhost to Windows localhost
+#localhostForwarding=true
+
+# 打开或关闭对 GUI 应用程序 (WSLg) 的支持
+guiApplications=true
+
+# 用于打开或关闭嵌套虚拟化的布尔值，使其他嵌套 VM 能够在 WSL 2 中运行。
+nestedVirtualization=true
+
+# 如果值为 mirrored，则会启用镜像网络模式。 默认或无法识别的字符串会生成 NAT 网络。如果你想切换回 NAT 网络模式，只需将 networkingMode 设置为 "nat"
+networkingMode=mirrored
+dnsTunneling=false
+firewall=false
+
+# 使用 Windows 的 HTTP 代理信息
+autoProxy=false 
+
+[experimental]
+
+# 允许使用所有分配到的本地 IP 地址访问容器或从容器访问主机。
+hostAddressLoopback=true
+
+# 自动释放WSL2虚拟硬盘空间
+sparseVhd=true
+
+# 自动回收内存，可在 gradual, dropcache, disabled 之间选择
+autoMemoryReclaim=gradual
