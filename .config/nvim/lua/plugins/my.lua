@@ -5,16 +5,29 @@ return {
   --},
   {
     -- Tag viewer
-    'preservim/tagbar',
+    "preservim/tagbar",
   },
   {
     --markdown_preview
-    --install without yarn or npm
     "iamcco/markdown-preview.nvim",
-    build = "call mkdp#util#install() ",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+    config = function()
+      if vim.fn.has("wsl") == 1 or vim.fn.has("linux") == 1 then
+        vim.cmd([[do FileType]])
+        vim.cmd([[
+           function OpenMarkdownPreview (url)
+              let cmd = "google-chrome-stable --new-window " . shellescape(a:url) . " &"
+              silent call system(cmd)
+          endfunction
+        ]])
+        vim.g.mkdp_browserfunc = "OpenMarkdownPreview"
+      end
+    end,
   },
   -- Color schemes
   --{ 'navarasu/onedark.nvim' },
-
-
 }
