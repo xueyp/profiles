@@ -23,18 +23,6 @@ opt.wrap = true
 -- asyncrun
 g.asyncrun_open = 15
 
--- xkb-switch
-if
-  vim.fn.has("win32") == 1
-  or vim.fn.has("win64") == 1
-  or vim.fn.has("win16") == 1
-  --then if vim.fn.has("gui_running") == 1
-then
-  vim.cmd("source $LOCALAPPDATA/nvim/plugin/xkb-switch.vim")
-  --vim.cmd 'source $XDG_CONFIG_HOME/nvim/plugin/xkb-switch.vim'
-  --	end
-end
-
 if vim.fn.has("wsl") == 1 then
   clip = "/mnt/c/windows/system32/clip.exe"
   vim.api.nvim_create_autocmd("TextYankPost", {
