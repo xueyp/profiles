@@ -20,6 +20,7 @@ if vim.fn.has("win32") == 1 then
     { "jay-babu/mason-nvim-dap", enabled = false },
     { "jbyuki/one-small-step-for-vimkind", enabled = false },
     { "nvim-treesitter/nvim-treesitter", enabled = false },
+    { "nvim-treesitter/nvim-treesitter-textobjects", enabled = false },
     { "RRethy/vim-illuminate", enabled = false },
     { "skywind3000/asyncrun.vim", enabled = false },
     { "nvim-neotest/neotest", enabled = false },
