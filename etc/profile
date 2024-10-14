@@ -15,9 +15,6 @@ fi
 export EDITOR=${EDITOR:-/bin/nano}
 export PAGER=${PAGER:-/usr/bin/less}
 
-# 077 would be more secure, but 022 is generally quite realistic
-umask 022
-
 unset ROOTPATH
 
 # process *.sh files in /etc/profile.d
@@ -33,10 +30,10 @@ if [ -n "${BASH_VERSION-}" ] ; then
 	if [ -f /etc/bash/bashrc ] ; then
 		# Bash login shells run only /etc/profile
 		# Bash non-login shells run only /etc/bash/bashrc
-		# Since we want to run /etc/bash/bashrc regardless, we source it 
-		# from here.  It is unfortunate that there is no way to do 
-		# this *after* the user's .bash_profile runs (without putting 
-		# it in the user's dot-files), but it shouldn't make any 
+		# Since we want to run /etc/bash/bashrc regardless, we source it
+		# from here.  It is unfortunate that there is no way to do
+		# this *after* the user's .bash_profile runs (without putting
+		# it in the user's dot-files), but it shouldn't make any
 		# difference.
 		. /etc/bash/bashrc
 	else
@@ -49,6 +46,7 @@ else
 	PS1="${USER:-$(whoami 2>/dev/null)}@$(uname -n 2>/dev/null) \$ "
 fi
 
+export XSESSION=mate-session
 export EDITOR=nvim
 export JAVA_HOME=/usr/local/jdk
 export JRE_HOME=/usr/local/jdk/jre
@@ -61,6 +59,6 @@ export YARN_HOME=$HADOOP_HOME
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export SPARK_HOME=/usr/local/spark
+export NEO4J_HOME=/usr/local/neo4j
 export CLASSPATH="./:$JAVA_HOME/lib:$JRE_HOME/lib"
-export PATH=$PATH:$GOROOT/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SCALA_HOME/bin:$SPARK_HOME/bin:/usr/local/sbt/bin:/usr/local/cassandra/bin:/usr/local/kafka/bin:/usr/local/mongodb/bin:/usr/local/es/bin:$JAVA_HOME/bin
-
+export PATH=$PATH:$GOROOT/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SCALA_HOME/bin:$SPARK_HOME/bin:/usr/local/sbt/bin:/usr/local/cassandra/bin:/usr/local/kafka/bin:/usr/local/mongodb/bin:$NEO4J_HOME/bin:/usr/local/es/bin:$JAVA_HOME/bin
