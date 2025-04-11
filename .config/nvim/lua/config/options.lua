@@ -32,3 +32,9 @@ if vim.fn.has("wsl") == 1 then
     end,
   })
 end
+
+-- vim-dadbod
+vim.g.dbs = {
+  { name = "pg-183", url = "postgres://postgres:111111qQ@192.168.12.183/postgres" },
+  { name = "staging", url = "Replace with your database connection URL." },
+}
