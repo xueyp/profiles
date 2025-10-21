@@ -1,6 +1,8 @@
 local g = vim.g -- Global variables
 local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 
+g.clipboard = "osc52"
+
 opt.clipboard = "unnamed,unnamedplus"
 opt.swapfile = false -- Don't use swapfile
 opt.confirm = false
