@@ -3,13 +3,14 @@
 memory=8GB
 
 # Sets the VM to use two virtual processors
-processors=4
+processors=8
 
 # Sets amount of swap storage space to 8GB, default is 25% of available RAM
 swap=4GB
 
 # Sets swapfile path location, default is %USERPROFILE%\AppData\Local\Temp\swap.vhdx
-#swapFile = D:\\Documents\\wsl\\swap.vhdx
+swapFile = C:\\Documents\\wsl\\swap.vhdx
+kernel = C:\\Documents\\wsl\\kernel\\bzImage-x86_64
 
 # Turn on default connection to bind WSL 2 localhost to Windows localhost
 #localhostForwarding=true
